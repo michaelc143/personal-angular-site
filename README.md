@@ -6,11 +6,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. Clone the repository: 
 ```bash
-git clone https://github.com/michaelc143/Canna-Swift
+git clone https://github.com/michaelc143/personal-angular-site
 ```
 2. Navigate to the project directory
 ```bash
-cd CannaSwiftAngular
+cd personal-angular-site
 ```
 3. Install the necessary dependencies
 ```bash
