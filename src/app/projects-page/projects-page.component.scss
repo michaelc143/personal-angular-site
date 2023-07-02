@@ -1,4 +1,19 @@
 .projects-page {
     text-align: center;
     padding-top: 3.5rem;
+
+    h3 {
+        padding-bottom: 1rem;
+    }
+}
+
+.react-proj-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        max-height: 20rem;
+        width: auto;
+        padding-left: 2rem;
+    }
 }
