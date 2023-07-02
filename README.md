@@ -42,6 +42,11 @@ If you want to run the unit tests without opening a chrome window, run the follo
 ng test --watch=false --browsers=ChromeHeadless
 ```
 
+If you want to run the unit tests for coverage, run the following command
+```bash
+ng test --watch=false --browsers=ChromeHeadless --code-coverage
+```
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
