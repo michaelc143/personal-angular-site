@@ -32,7 +32,15 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To execute the unit tests for this web app, run the following command:
+```bash
+ng test
+```
+
+If you want to run the unit tests without opening a chrome window, run the following command
+```bash
+ng test --watch=false --browsers=ChromeHeadless
+```
 
 ## Running end-to-end tests
 
