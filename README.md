@@ -1,6 +1,6 @@
 # PersonalAngularSite
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.
+This project is a side hobby being worked on over the course of Summer 2023 while working full-time.
 
 ## Installation
 
