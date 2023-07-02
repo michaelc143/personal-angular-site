@@ -1,6 +1,6 @@
 # PersonalAngularSite
 
-This project is a side hobby being worked on over the course of Summer 2023 while working full-time.
+This project is a side hobby being worked on over the course of Summer 2023 while working full-time. If you discover any bugs or have any questions at all, feel free to email me at mcorbishley@wisc.edu
 
 ## Installation
 
