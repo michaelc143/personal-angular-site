@@ -7,11 +7,22 @@
     }
 }
 
-.react-proj-container,
+.react-proj-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        max-height: 20rem;
+        width: auto;
+        padding-left: 2rem;
+    }
+}
+
 .watch-proj-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 2.5rem;
     img {
         max-height: 20rem;
         width: auto;
