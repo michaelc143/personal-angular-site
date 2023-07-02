@@ -16,15 +16,15 @@ cd personal-angular-site
 ```bash
 npm install
 ```
-4. Start the development server
+
+## Local Development server
+
+To run the web app locally once you have cloned it, simply run the following command:
 ```bash
 ng serve
 ```
-5. Open a web browser and navigate to http://localhost:4200 to access the website.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This will deploy a local development server that you can access by navigating to `http://localhost:4200/` in your browser to view.
 
 ## Build
 
@@ -41,10 +41,6 @@ If you want to run the unit tests without opening a chrome window, run the follo
 ```bash
 ng test --watch=false --browsers=ChromeHeadless
 ```
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
 
