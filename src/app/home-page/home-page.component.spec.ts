@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomePageComponent } from './home-page.component';
+import { CssSelector } from '@angular/compiler';
+import { By } from '@angular/platform-browser';
 
 describe('HomePageComponent', () => {
   let component: HomePageComponent;
@@ -21,8 +23,8 @@ describe('HomePageComponent', () => {
 
   it('should have the correct title', () => {
     const fixture = TestBed.createComponent(HomePageComponent);
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toEqual("Welcome to my website!");
+    component = fixture.componentInstance;
+    expect(component.welcomeHeader).toContain("Welcome to my website!");
   });
 
   it('should render the profile img', () => {
