@@ -25,8 +25,12 @@ jobs:
         run: npm install -g @angular/cli
       - name: Unit testing
         run: ng test --watch=false --browsers=ChromeHeadless --code-coverage
-      - name: Checkout Pages
-        run: git checkout gh-pages
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with: 
+          ref: 'gh-pages'
       - name: Pull main
         run: git pull origin main
       - name: Deploy
