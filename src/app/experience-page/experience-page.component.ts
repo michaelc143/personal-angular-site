@@ -16,4 +16,10 @@ export class ExperiencePageComponent {
   teachingAssistant = "AP JAVA Teaching Assistant (August 2019 - January 2020)"
   teachingAssistantTopic1 = "Aided in teaching AP Java to fellow high school students"
   teachingAssistantTopic2 = "Aided in teaching fellow high school students in development and debugging of projects"
+  languagesTitle = "Programming Languages"
+  languagesList = "Java, JavaScript, Python, TypeScript, C, HTML, CSS"
+  frameworksTitle = "Frameworks"
+  frameworksList = "Angular, React, SpringBoot, Three.JS"
+  otherToolsTitle = "Other Tools"
+  otherToolsList = "Git, Docker, Bash, Ci/Cd Deployment"
 }
