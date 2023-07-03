@@ -47,4 +47,4 @@ jobs:
       - name: Build
         run: ng build
       - name: Deploy
-        run: ng deploy --base-href https://michaelc143.github.io/personal-angular-site/
+        run: ng deploy --base-href https://michaelc143.github.io/personal-angular-site/ --no-silent
