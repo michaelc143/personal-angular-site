@@ -33,6 +33,10 @@ jobs:
       - uses: actions/checkout@v3
         with: 
           ref: 'gh-pages'
+      - name: Username Config
+        run: git config user.name github-actions
+      - name: Email Config
+        run: git config user.email github-acitons@github.com
       - name: Pull main
         run: git pull origin main --rebase
       - name: Deploy
