@@ -40,6 +40,8 @@ jobs:
       - name: Pull main
         run: git pull origin main --rebase
       - name: Angular install script
+        run: npm install
+      - name: Angular install script
         run: npm install -g @angular/cli
       - name: Deploy
         run: ng deploy --base-href https://https://michaelc143.github.io/personal-angular-site/
