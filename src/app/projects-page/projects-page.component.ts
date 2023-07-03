@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class ProjectsPageComponent {
     reactTitle: String = "Personal Resume Site in React";
     watchTitle: String = "Watch Animation using OpenGl";
+    sourceCodeMsg: String = "Source Code Here!";
 }
