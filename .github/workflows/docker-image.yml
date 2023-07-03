@@ -24,4 +24,10 @@ jobs:
       - name: Angular install script
         run: npm install -g @angular/cli
       - name: Unit testing
-        run: ng test --watch=false --browsers=ChromeHeadless
+        run: ng test --watch=false --browsers=ChromeHeadless --code-coverage
+      - name: Checkout Pages
+        run: git checkout gh-pages
+      - name: Pull main
+        run: git pull origin main
+      - name: Deploy
+        run: ng deloy --base-href https://https://michaelc143.github.io/personal-angular-site/
