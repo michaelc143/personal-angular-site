@@ -26,14 +26,3 @@ jobs:
         run: npm install -g @angular/cli
       - name: Unit testing
         run: ng test --watch=false --browsers=ChromeHeadless --code-coverage
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with: 
-          ref: 'gh-pages'
-      - name: Pull main
-        run: git pull origin main
-      - name: Deploy
-        run: ng deloy --base-href https://https://michaelc143.github.io/personal-angular-site/
