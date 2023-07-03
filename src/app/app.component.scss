@@ -80,6 +80,7 @@ footer {
         text-decoration:none;
         text-shadow:0px 1px 0px #528ecc;
         margin-left: 1rem;
+        box-shadow: 1px 1px 2px #333;
     }
     button:hover {
         background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
@@ -97,4 +98,28 @@ footer {
     padding-right: 1rem;
     text-decoration: none;
     color: white;
+}
+
+.my-name {
+    transition: filter 0.15s ease-in-out;
+}
+
+.my-name:hover {
+    filter: brightness(85%);
+}
+
+.projects-link {
+    transition: filter 0.15s ease-in-out;
+}
+
+.projects-link:hover {
+    filter: brightness(85%);
+}
+
+.exp-and-skills {
+    transition: filter 0.15s ease-in-out;
+}
+
+.exp-and-skills:hover {
+    filter: brightness(85%);
 }
