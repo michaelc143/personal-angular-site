@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./experience-page.component.scss']
 })
 export class ExperiencePageComponent {
-  internship = "Software Engineer Intern - Entegral (August 2023 - Current)"
+  internship = "Software Engineer Intern - Entegral (May 2023 - Current)"
   internshipTopic = "Engineered and deployed captivating user interface features using Angular TypeScript, while seamlessly integrating cutting-edge API endpoints and functionalities within Java Spring Boot."
   internshipTopic2 = "Contributed to the development of an internal tool, including establishing a continuous integration and development pipeline on GitLab, designing a Dockerfile, organizing file structure, and tracking business value metrics for data integrity assurance."
   internshipTopic3 = "Enhanced my professional development by actively participating in weekly hour-long technology seminars covering a diverse range of topics such as microservice architecture, machine learning, and cloud deployment."
