@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomePageComponent } from './home-page.component';
-import { CssSelector } from '@angular/compiler';
+import { MatCardModule } from '@angular/material/card';
 import { By } from '@angular/platform-browser';
 
 describe('HomePageComponent', () => {
@@ -10,7 +10,8 @@ describe('HomePageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HomePageComponent]
+      declarations: [HomePageComponent],
+      imports: [MatCardModule]
     });
     fixture = TestBed.createComponent(HomePageComponent);
     component = fixture.componentInstance;
@@ -21,34 +22,13 @@ describe('HomePageComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have the correct title', () => {
-    const fixture = TestBed.createComponent(HomePageComponent);
-    component = fixture.componentInstance;
-    expect(component.welcomeHeader).toContain("Welcome to my website!");
+  it('should generate the angular material card', () => {
+    expect(fixture.debugElement.query(By.css('mat-card'))).toBeTruthy();
   });
 
-  it('should render the profile img', () => {
-    const fixture = TestBed.createComponent(HomePageComponent);
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('img')).toBeTruthy;
+  it('should generate the angular material card title', () => {
+    expect(fixture.debugElement.query(By.css('mat-card-title'))).toBeTruthy();
   });
 
-  it('should render the footer home btn', () => {
-    const fixture = TestBed.createComponent(HomePageComponent);
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('footer')).toBeTruthy;
-    expect(compiled.querySelector('footer .homeBtn')).toBeTruthy;
-  });
-
-  it('should render the github btn', () => {
-    const fixture = TestBed.createComponent(HomePageComponent);
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('footer .githubBtn')).toBeTruthy;
-  });
-
-  it('should render the linkedin btn', () => {
-    const fixture = TestBed.createComponent(HomePageComponent);
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('footer .linkedinBtn')).toBeTruthy;
-  });
+  // const compiled = fixture.nativeElement as HTMLElement;
 });
