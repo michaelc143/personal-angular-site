@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { AppDarkModeToggleComponent } from './app-dark-mode-toggle/app-dark-mode-toggle.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ComponentFixture } from '@angular/core/testing';
 
 describe('AppComponent', () => {
@@ -13,8 +14,16 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     TestBed.configureTestingModule(
       {
-        imports: [RouterTestingModule, MatCardModule, MatIconModule], 
-        declarations: [AppComponent,AppDarkModeToggleComponent]
+        imports: [
+          RouterTestingModule,
+          MatCardModule,
+          MatIconModule,
+          MatCheckboxModule
+        ], 
+        declarations: [
+          AppComponent,
+          AppDarkModeToggleComponent
+        ]
       }
     )
     fixture = TestBed.createComponent(AppComponent);

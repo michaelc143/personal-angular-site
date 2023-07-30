@@ -90,7 +90,7 @@ footer {
 }
 
 .toolbar-name {
-    padding-right: 1rem;
+    padding-right: .5rem;
     text-decoration: none;
     color: white;
 }
@@ -100,6 +100,12 @@ footer {
     padding-right: 0.5rem;
     text-decoration: none;
     color: white;
+}
+
+app-app-dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .my-name {
