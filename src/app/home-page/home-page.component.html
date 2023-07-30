@@ -1,12 +1,18 @@
-<div class="home-page-div">
-    <h1 class="welcome-header">{{ welcomeHeader }}</h1>
-        <h2>{{ toolbarTip }}</h2>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            <h1 class="welcome-header">{{ welcomeHeader }}</h1>
+            <h2>{{ toolbarTip }}</h2>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
         <div class="nameAndPhoto">
-        <img class="profile-pic" src="https://avatars.githubusercontent.com/u/79810775?v=4">
-            <p> {{ para1 }}
-                <br/>
-                <br/>
-                {{ para2 }}
-            </p>
-        </div>
-</div>
+            <img class="profile-pic" src="https://avatars.githubusercontent.com/u/79810775?v=4">
+                <p> {{ para1 }}
+                    <br/>
+                    <br/>
+                    {{ para2 }}
+                </p>
+            </div>
+    </mat-card-content>
+</mat-card>

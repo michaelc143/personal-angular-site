@@ -9,12 +9,13 @@
 .chips-list {
     display: flex;
     justify-content: center !important;
+    padding-bottom: 1rem;
 }
 
 mat-chip {
     background-color: #1976d2 !important;
 }
 
-.mdc-evolution-chip--with-avatar.mdc-evolution-chip--with-primary-graphic .mdc-evolution-chip__graphic {
-    padding-right: 0 !important;
+mat-divider {
+    border-top-color: #333 !important;
 }

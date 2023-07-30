@@ -1,23 +1,28 @@
-.home-page-div {
-    text-align: center;
-    padding-top: 3.5rem;
-
-    .nameAndPhoto {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    p {
-        max-width: 25rem;
-        margin-left: 0rem;
-        padding-top: 2rem;
-    }
-}
-
 .profile-pic {
     border-radius: 50%;
     width: auto;
     height: 15rem;
     padding-right: 0.5rem;
+}
+
+mat-card {
+    display: flex !important;
+    background-color: inherit;
+    margin-top: 5.5rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    .nameAndPhoto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mat-mdc-card-header {
+        justify-content: center !important;
+    }
+    mat-card-content {
+        max-width: 35rem;
+        margin: auto;
+    }
 }
