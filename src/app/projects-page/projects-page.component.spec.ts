@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MatCardModule } from '@angular/material/card';
 import { ProjectsPageComponent } from './projects-page.component';
 
 describe('ProjectsPageComponent', () => {
@@ -8,7 +8,8 @@ describe('ProjectsPageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ProjectsPageComponent]
+      declarations: [ProjectsPageComponent],
+      imports: [MatCardModule]
     });
     fixture = TestBed.createComponent(ProjectsPageComponent);
     component = fixture.componentInstance;
