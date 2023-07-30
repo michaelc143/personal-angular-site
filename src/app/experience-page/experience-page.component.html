@@ -18,61 +18,25 @@
     <h1>Skills</h1>
         <h2>{{languagesTitle}}</h2>
         <div class="chips-list">
-            <mat-chip-listbox>
-                <mat-chip>
-                    Java
-                </mat-chip>
-                <mat-chip>
-                    JavaScript
-                </mat-chip>
-                <mat-chip>
-                    Python
-                </mat-chip>
-                <mat-chip>
-                    TypeScript
-                </mat-chip>
-                <mat-chip>
-                    C
-                </mat-chip>
-                <mat-chip>
-                    HTML
-                </mat-chip>
-                <mat-chip>
-                    CSS
+            <mat-chip-listbox> 
+                <mat-chip *ngFor="let lang of languagesList">
+                    {{lang}}
                 </mat-chip>
             </mat-chip-listbox>
         </div>
         <h2>{{frameworksTitle}}</h2>
             <div class="chips-list">
             <mat-chip-listbox>
-                <mat-chip>
-                    Angular
-                </mat-chip>
-                <mat-chip>
-                    React
-                </mat-chip>
-                <mat-chip>
-                    SpringBoot
-                </mat-chip>
-                <mat-chip>
-                    Three.JS
+                <mat-chip *ngFor="let framework of frameworksList">
+                    {{framework}}
                 </mat-chip>
             </mat-chip-listbox>
             </div>
         <h2>{{otherToolsTitle}}</h2>
             <div class="chips-list">
             <mat-chip-listbox>
-                <mat-chip>
-                    Git
-                </mat-chip>
-                <mat-chip>
-                    Docker
-                </mat-chip>
-                <mat-chip>
-                    Bash
-                </mat-chip>
-                <mat-chip>
-                    CI/CD Deployments
+                <mat-chip *ngFor="let tool of otherToolsList">
+                    {{tool}}
                 </mat-chip>
             </mat-chip-listbox>
             </div>

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatRippleModule} from '@angular/material/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,8 +19,8 @@ import { ProjectsPageComponent } from './projects-page/projects-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatProgressBarModule,
-    MatChipsModule
+    MatChipsModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
