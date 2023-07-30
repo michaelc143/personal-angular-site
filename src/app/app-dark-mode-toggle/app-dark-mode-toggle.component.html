@@ -1,0 +1,7 @@
+<input
+    type="checkbox"
+    [checked]="darkMode$ | async"
+    (change)="onToggle()"
+    matTooltip="Click me to toggle dark mode!"
+>
+<mat-icon fontIcon="dark_mode" matTooltip="Click the checkbox above to toggle dark mode!"></mat-icon>
