@@ -1,7 +1,10 @@
 .projects-page {
     text-align: center;
     padding-top: 3.5rem;
-
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
     h3 {
         padding-bottom: 1rem;
     }

@@ -8,3 +8,7 @@ body.light-mode {
 body.dark-mode { 
     margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: white !important; background-color: #333;
 }
+
+body:not(.dark-mode-preloading) {
+    transition: all 0.3s linear;
+}
