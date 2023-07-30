@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { DarkModeService } from 'angular-dark-mode';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-experience-page',
@@ -6,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./experience-page.component.scss']
 })
 export class ExperiencePageComponent {
+  darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
   internship = "Software Engineer Intern - Entegral (May 2023 - Current)"
   internshipTopics = ["Engineered and deployed captivating user interface features using Angular TypeScript, while seamlessly integrating cutting-edge API endpoints and functionalities within Java Spring Boot.",
   "Contributed to the development of an internal tool, including establishing a continuous integration and development pipeline on GitLab, designing a Dockerfile, organizing file structure, and tracking business value metrics for data integrity assurance.",
@@ -30,4 +33,6 @@ export class ExperiencePageComponent {
   frameworksList = ["Angular", "React", "SpringBoot", "Three.JS"]
   otherToolsTitle = "Other Tools"
   otherToolsList = ["Git", "Docker", "Bash", "CI/CD Deployments", "Google Cloud Platform"]
+
+  constructor(private darkModeService: DarkModeService) {}
 }
