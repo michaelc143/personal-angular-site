@@ -15,7 +15,8 @@
         <div class="chips-list">
             <mat-chip-listbox> 
                 <mat-chip *ngFor="let lang of languagesList">
-                    {{lang}} <img src="../java-icon.png">
+                    <p>{{lang}}</p>
+                    <img matChipAvatar *ngIf="lang === 'Java'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/java-icon.png">
                 </mat-chip>
             </mat-chip-listbox>
         </div>

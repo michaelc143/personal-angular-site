@@ -14,3 +14,7 @@
 mat-chip {
     background-color: #1976d2 !important;
 }
+
+.mdc-evolution-chip--with-avatar.mdc-evolution-chip--with-primary-graphic .mdc-evolution-chip__graphic {
+    padding-right: 0 !important;
+}
