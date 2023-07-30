@@ -5,5 +5,5 @@
     matTooltip="Click me to toggle dark mode!"
 >
 </mat-checkbox>
-<mat-icon *ngIf="(darkMode$ | async)" fontIcon="dark_mode" matTooltip="Click the checkbox above to toggle dark mode!"></mat-icon>
-<mat-icon *ngIf="!(darkMode$ | async)" fontIcon="wb_sunny" matTooltip="Click the checkbox above to toggle dark mode!"></mat-icon>
+<mat-icon *ngIf="(darkMode$ | async)" fontIcon="dark_mode" matTooltip="You are currently viewing the site in dark mode!"></mat-icon>
+<mat-icon *ngIf="!(darkMode$ | async)" fontIcon="wb_sunny" matTooltip="You are currently viewing the site in light mode!"></mat-icon>

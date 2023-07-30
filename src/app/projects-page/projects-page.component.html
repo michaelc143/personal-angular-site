@@ -1,36 +1,67 @@
 <div class="projects-page">
     <h1 class="projects-title">Projects</h1>
     <h3>Here's some of my open source projects with the source code linked in the titles!</h3>
-    <div class="react-proj-container">
-        <div class="react-links">
-            <a href="https://michaelc143.github.io/personal-react-site/" target="_blank" matTooltip="Click here for my resume written in React!">
-                <p>{{ reactTitle }}</p>
-            </a>
-            <a href="https://github.com/michaelc143/personal-react-site" target="_blank" matTooltip="Click here for source code!">
-                <span>{{sourceCodeMsg}}</span>
-            </a>
-        </div>
-        <img class="react-proj-image" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/react-site-png.png"/>
-    </div>
-    <div class="watch-proj-container">
-        <a href="https://github.com/michaelc143/Computer-Graphics-Fall-2022/tree/main/Project%202" target="_blank" matTooltip="Click here for source code!">
-            <p>{{ watchTitle }}</p>
-            <span>{{sourceCodeMsg}}</span>
-        </a>
-        <img class="watch-proj-img" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/watch-animate.png"/>
-    </div>
-    <div class="ship-proj-container">
-        <a href="https://github.com/michaelc143/Computer-Graphics-Fall-2022/tree/main/Project%204" target="_blank" matTooltip="Click here for source code!">
-            <p>{{shipTitle}}</p>
-            <span>{{sourceCodeMsg}}</span>
-        </a>
-        <img class="ship-proj-img" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/ship-animate.png" />
-    </div>
-    <div class="tri-proj-container">
-        <a href="https://github.com/michaelc143/Computer-Graphics-Fall-2022/tree/main/Project%207" target="_blank" matTooltip="Click here for source code!">
-            <p>{{triangleTitle}}</p>
-            <span>{{sourceCodeMsg}}</span>
-        </a>
-        <img class="tri-proj-img" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/tri-animate.png" />
-    </div>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                {{reactTitle}}
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/react-site-png.png">
+        <mat-card-content>
+            <div class="react-links">
+                <a href="https://michaelc143.github.io/personal-react-site/" target="_blank" matTooltip="Click here for my resume written in React!">
+                    <p>{{ reactTitle }}</p>
+                </a>
+                <a href="https://github.com/michaelc143/personal-react-site" target="_blank" matTooltip="Click here for source code!">
+                    <span>{{sourceCodeMsg}}</span>
+                </a>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                {{watchTitle}}
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/watch-animate.png">
+        <mat-card-content>
+            <div class="react-links">
+                <a href="https://github.com/michaelc143/Computer-Graphics-Fall-2022/tree/main/Project%202" target="_blank" matTooltip="Click here for source code!">
+                    <span>{{sourceCodeMsg}}</span>
+                </a>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                {{shipTitle}}
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/ship-animate.png">
+        <mat-card-content>
+            <div class="react-links">
+                <a href="https://github.com/michaelc143/Computer-Graphics-Fall-2022/tree/main/Project%204" target="_blank" matTooltip="Click here for source code!">
+                    <span>{{sourceCodeMsg}}</span>
+                </a>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                {{triangleTitle}}
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/tri-animate.png">
+        <mat-card-content>
+            <div class="react-links">
+                <a href="https://github.com/michaelc143/Computer-Graphics-Fall-2022/tree/main/Project%207" target="_blank" matTooltip="Click here for source code!">
+                    <span>{{sourceCodeMsg}}</span>
+                </a>
+            </div>
+        </mat-card-content>
+    </mat-card>
 </div>

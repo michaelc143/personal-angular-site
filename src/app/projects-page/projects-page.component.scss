@@ -10,53 +10,18 @@
     }
 }
 
-.react-proj-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-        max-height: 20rem;
-        width: auto;
-        padding-left: 2rem;
+mat-card {
+    text-align: center;
+    background-color: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    .mat-mdc-card-header {
+        justify-content: center;
+        padding-bottom: .5rem;
     }
-}
-
-.watch-proj-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 2.5rem;
-    img {
-        max-height: 20rem;
-        width: auto;
-        padding-left: 2rem;
+    mat-card-content {
+        padding: 1rem 0;
     }
-}
-
-.ship-proj-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: 17rem;
-    span {
-        padding-right: 2rem;
-    }
-
-    img {
-        max-height: 20rem;
-        width: auto;
-        padding-left: 2rem;
-    }
-}
-
-.tri-proj-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: 25rem;
-    img {
-        max-height: 20rem;
-        width: auto;
-        padding-left: 2rem;
-    }
+    margin-bottom: 5rem;
 }
