@@ -11,7 +11,7 @@ RUN npm install -g @angular/cli
 COPY package*.json ./
 
 # Install app dependencies
-RUN npm install
+RUN npm install --force
 
 # Copy the entire application to the working directory
 COPY . .
