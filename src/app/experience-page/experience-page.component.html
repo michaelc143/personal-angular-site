@@ -17,6 +17,11 @@
                 <mat-chip *ngFor="let lang of languagesList">
                     <p>{{lang}}</p>
                     <img matChipAvatar *ngIf="lang === 'Java'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/java-icon.png">
+                    <img matChipAvatar *ngIf="lang === 'JavaScript'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/js-logo.png">
+                    <img matChipAvatar *ngIf="lang === 'Python'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/python-icon.png">
+                    <img matChipAvatar *ngIf="lang === 'TypeScript'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/typescript-icon.png">
+                    <img matChipAvatar *ngIf="lang === 'C'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/c-icon.png">
+                    <img matChipAvatar *ngIf="lang === 'HTML & CSS'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/html-css-icon.png">
                 </mat-chip>
             </mat-chip-listbox>
         </div>
