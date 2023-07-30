@@ -54,21 +54,6 @@ p {
     margin: 0 12px;
 }
 
-.toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 8px;
-}
-
-.toolbar #youtube-logo {
-    height: 40px;
-    margin: 0 16px;
-}
-
-.toolbar #twitter-logo:hover,
-.toolbar #youtube-logo:hover {
-    opacity: 0.8;
-}
-
 footer {
     padding-top: 2rem;
     text-align: center;
@@ -104,10 +89,15 @@ footer {
     }
 }
 
-.experience-div,
-.skills-div,
 .toolbar-name {
     padding-right: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.skills-div,
+.experience-div {
+    padding-right: 0.5rem;
     text-decoration: none;
     color: white;
 }
