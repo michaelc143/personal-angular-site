@@ -1,20 +1,15 @@
 <div class="experience-page-div">
     <h1>Experience</h1>
         <h2 class="internship-title">{{ internship }}</h2>
-            <p>{{internshipTopic}}</p>
-            <p>{{internshipTopic2}}</p>
-            <p>{{internshipTopic3}}</p>
-            <p>{{internshipTopic4}}</p>
+            <p *ngFor="let topic of internshipTopics">{{topic}}</p>
         <h2>{{ webdevUW }}</h2>
-            <p>{{webdevUWTopic}}</p>
-            <p>{{webdevWebHacks}}</p>
+            <p *ngFor="let topic of webdevUWTopics">{{topic}}</p>
         <h2>{{degree}}</h2>
             <p>{{degreeTopic}}</p>
             <h3>{{degreeCourseTitle}}</h3>
             <p>{{degreeCourses}}</p>
         <h2>{{teachingAssistant}}</h2>
-            <p> {{teachingAssistantTopic1}}</p>
-            <p> {{teachingAssistantTopic2}}</p>
+            <p *ngFor="let topic of teachingAssistantTopics"> {{topic}}</p>
     <h1>Skills</h1>
         <h2>{{languagesTitle}}</h2>
         <div class="chips-list">
