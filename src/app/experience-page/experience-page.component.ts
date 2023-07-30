@@ -22,9 +22,6 @@ export class ExperiencePageComponent {
   teachingAssistantTopic1 = "Played an instrumental role in instructing and mentoring high school students in AP Java, fostering their understanding and mastery of advanced Java concepts."
   teachingAssistantTopic2 = "Provided invaluable support in guiding and empowering fellow high school students in project development and debugging, facilitating their growth and proficiency in software engineering practices."
   languagesTitle = "Programming Languages"
-  languagesList = "Java, JavaScript, Python, TypeScript, C, HTML, CSS"
   frameworksTitle = "Frameworks"
-  frameworksList = "Angular, React, SpringBoot, Three.JS"
   otherToolsTitle = "Other Tools"
-  otherToolsList = "Git, Docker, Bash, Ci/Cd Deployment"
 }
