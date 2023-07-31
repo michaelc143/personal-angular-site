@@ -43,6 +43,11 @@
             <mat-chip-listbox>
                 <mat-chip *ngFor="let tool of otherToolsList">
                     {{tool}}
+                    <img matChipAvatar *ngIf="tool === 'Git'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/git%20logo.png">
+                    <img matChipAvatar *ngIf="tool === 'Docker'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/ad77ae7808b31523a8635f5524b2b6bfbb714318/src/app/logos/docker-logo.svg">
+                    <img matChipAvatar *ngIf="tool === 'Bash'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/bash-logo.png">
+                    <img matChipAvatar *ngIf="tool === 'Google Cloud Platform'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/gcp-logo.png">
+                    <img matChipAvatar *ngIf="tool === 'CI/CD Deployments'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/cicd-logo.png">
                 </mat-chip>
             </mat-chip-listbox>
             </div>
