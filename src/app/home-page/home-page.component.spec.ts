@@ -26,9 +26,20 @@ describe('HomePageComponent', () => {
     expect(fixture.debugElement.query(By.css('mat-card'))).toBeTruthy();
   });
 
-  it('should generate the angular material card title', () => {
-    expect(fixture.debugElement.query(By.css('mat-card-title'))).toBeTruthy();
+  it('should generate the angular material card title h1', () => {
+    const h1 = fixture.debugElement.query(By.css('mat-card-title h1'));
+    const compiled = h1.nativeElement as HTMLElement;
+    expect(compiled.textContent).toBe("Welcome to my website!");
   });
 
-  // const compiled = fixture.nativeElement as HTMLElement;
+  it('should generate the angular material card title h2', () => {
+    const h2 = fixture.debugElement.query(By.css('mat-card-title h2'));
+    const compiled = h2.nativeElement as HTMLElement;
+    expect(compiled.textContent).toBe("Use the toolbar above to navigate to other pages");
+  });
+
+  it('should generate the angular material card image', () => {
+    expect(fixture.debugElement.query(By.css('mat-card img'))).toBeTruthy();
+  });
+
 });

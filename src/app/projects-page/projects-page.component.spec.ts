@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatCardModule } from '@angular/material/card';
 import { ProjectsPageComponent } from './projects-page.component';
+import { By } from '@angular/platform-browser';
 
 describe('ProjectsPageComponent', () => {
   let component: ProjectsPageComponent;
@@ -23,6 +24,11 @@ describe('ProjectsPageComponent', () => {
   it('should have the title', () => {
     const fixture = TestBed.createComponent(ProjectsPageComponent);
     expect(fixture.nativeElement.querySelector('.projects-title')).toBeTruthy;
+  });
+
+  it('should have the correct number of proj cards', () => {
+    const fixture = TestBed.createComponent(ProjectsPageComponent);
+    expect(fixture.debugElement.queryAll(By.css('mat-card')).length).toEqual(4);
   });
 
   it('should have react project', () => {
