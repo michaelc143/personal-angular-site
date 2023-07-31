@@ -4,9 +4,9 @@ import { AppComponent } from './app.component';
 import { AppDarkModeToggleComponent } from './app-dark-mode-toggle/app-dark-mode-toggle.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ComponentFixture } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -19,7 +19,7 @@ describe('AppComponent', () => {
           RouterTestingModule,
           MatCardModule,
           MatIconModule,
-          MatCheckboxModule
+          MatSlideToggleModule
         ], 
         declarations: [
           AppComponent,
