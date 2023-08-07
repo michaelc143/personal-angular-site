@@ -64,4 +64,20 @@
             </div>
         </mat-card-content>
     </mat-card>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                {{employeeTitle}}
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="">
+        <mat-card-content class="api-links">
+            <a href="https://github.com/michaelc143/EmployeePayrollFrontend" target="_blank" matTooltip="Click here for source code!">
+                <span>{{sourceCodeMsg}} (Frontend)</span>
+            </a>
+            <a href="https://github.com/michaelc143/EmployeePayrollApi" target="_blank" matTooltip="Click here for source code!">
+                <span>{{sourceCodeMsg}} (API)</span>
+            </a>
+        </mat-card-content>
+    </mat-card>
 </div>

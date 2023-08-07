@@ -10,6 +10,15 @@
     }
 }
 
+.api-links {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    a {
+        padding: 0.5rem;
+    }
+}
+
 mat-card {
     text-align: center;
     background-color: inherit;
