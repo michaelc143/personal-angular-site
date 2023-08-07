@@ -10,6 +10,6 @@ export class ProjectsPageComponent {
     watchTitle: String = "Watch Animation using OpenGl";
     shipTitle: String = "Space Ship Animation using OpenGl";
     triangleTitle: String = "Moveable Triangle Animation using Opengl";
-    employeeTitle: String = "Front end for Empoyee Payroll API"
+    employeeTitle: String = "Empoyee Payroll API with frontend"
     sourceCodeMsg: String = "Source Code Here!";
 }
