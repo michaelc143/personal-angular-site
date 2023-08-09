@@ -4,12 +4,13 @@
     max-width: 15rem; /* Set a maximum width for the image */
     height: auto; /* Let the height adjust automatically */
     padding-right: 0.5rem;
+    transition: all 0.5s ease;
 }
 
 /* Media query for screens with a maximum width of 768px (typical mobile devices) */
 @media (max-width: 768px) {
     .profile-pic {
-        max-width: 100%; /* Adjust the maximum width for mobile */
+        max-width: 10rem; /* Adjust the maximum width for mobile */
         height: auto; /* Let the height adjust automatically */
     }
 }
