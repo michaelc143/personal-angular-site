@@ -97,9 +97,12 @@ footer {
 
 .skills-div,
 .experience-div {
-    padding-right: 0.5rem;
     text-decoration: none;
     color: white;
+}
+
+.menu-btn {
+    margin-right: 0.5rem;
 }
 
 app-app-dark-mode-toggle {

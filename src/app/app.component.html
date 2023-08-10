@@ -14,12 +14,15 @@
         <img width="40" alt="Octicons-mark-github" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/64px-Octicons-mark-github.svg.png">
       </a>    
     </div>
+    <button mat-button [matMenuTriggerFor]="menu" class="menu-btn">Pages</button>
+    <mat-menu #menu="matMenu">
     <a aria-label="experience" class="experience-div" routerLink="experience" matRipple [matRippleCentered]="true" matTooltip="My experience in software!">
-      <span class="exp-and-skills">Experience & Skills</span>
+      <span mat-menu-item class="exp-and-skills">Experience & Skills</span>
     </a>
     <a aria-label="projects" class="skills-div" routerLink="projects" matRipple [matRippleCentered]="true" matTooltip="Some of my previous projects!">
-      <span class="projects-link">Projects</span>
+      <span mat-menu-item class="projects-link">Projects</span>
     </a>
+  </mat-menu>
 </div>
 <router-outlet></router-outlet>
 <footer>

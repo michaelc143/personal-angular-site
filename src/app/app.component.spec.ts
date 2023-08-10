@@ -7,6 +7,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { ComponentFixture } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -19,7 +21,9 @@ describe('AppComponent', () => {
           RouterTestingModule,
           MatCardModule,
           MatIconModule,
-          MatSlideToggleModule
+          MatSlideToggleModule,
+          MatButtonModule,
+          MatMenuModule
         ], 
         declarations: [
           AppComponent,
@@ -44,8 +48,7 @@ describe('AppComponent', () => {
     expect(fixture.debugElement.query(By.css('.toolbar'))).toBeTruthy();
     expect(fixture.debugElement.query(By.css('app-app-dark-mode-toggle'))).toBeTruthy();
     expect(fixture.debugElement.query(By.css('.linkedin-logo'))).toBeTruthy();
-    expect(fixture.debugElement.query(By.css('.experience-div'))).toBeTruthy();
-    expect(fixture.debugElement.query(By.css('.skills-div'))).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('.menu-btn'))).toBeTruthy();
     expect(fixture.debugElement.query(By.css('.github-link'))).toBeTruthy();
   });
 
