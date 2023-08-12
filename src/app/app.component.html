@@ -17,10 +17,14 @@
     <button mat-button [matMenuTriggerFor]="menu" class="menu-btn">Pages</button>
     <mat-menu #menu="matMenu">
     <a aria-label="experience" class="experience-div" routerLink="experience" matRipple [matRippleCentered]="true" matTooltip="My experience in software!">
-      <span mat-menu-item class="exp-and-skills">Experience & Skills</span>
+      <span mat-menu-item class="exp-and-skills">Experience & Skills
+        <mat-icon>work</mat-icon>
+      </span>
     </a>
     <a aria-label="projects" class="skills-div" routerLink="projects" matRipple [matRippleCentered]="true" matTooltip="Some of my previous projects!">
-      <span mat-menu-item class="projects-link">Projects</span>
+      <span mat-menu-item class="projects-link">Projects
+        <mat-icon>gesture</mat-icon>
+      </span>
     </a>
   </mat-menu>
 </div>
