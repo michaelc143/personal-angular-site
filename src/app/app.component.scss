@@ -113,6 +113,10 @@ footer {
     margin-right: 0.5rem;
 }
 
+mat-menu {
+    overflow-x: hidden;
+}
+
 app-app-dark-mode-toggle {
     display: flex;
     align-items: center;
