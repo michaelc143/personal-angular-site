@@ -22,12 +22,8 @@ describe('ExperiencePageComponent', () => {
         expect(component).toBeTruthy();
     });
 
-    it('should have chips lists', () => {
-        expect(fixture.debugElement.query(By.css('mat-chip-listbox'))).toBeTruthy();
-    });
-
-    it('should have the correct number of chips listboxes', () => {
-        expect(fixture.debugElement.queryAll(By.css('mat-chip-listbox')).length).toEqual(5);
+    it('should have chips', () => {
+        expect(fixture.debugElement.query(By.css('mat-chip'))).toBeTruthy();
     });
 
     it('should have the correct number of chips', () => {

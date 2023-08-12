@@ -94,6 +94,15 @@ footer {
     color: white;
 }
 
+@media (max-width: 769px) {
+    .toolbar-name {
+        text-decoration: none;
+        color: white;
+        width: 4.5rem;
+    }
+}
+
+
 .skills-div,
 .experience-div {
     text-decoration: none;
