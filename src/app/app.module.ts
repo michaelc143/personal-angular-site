@@ -16,6 +16,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ExperiencePageComponent } from './experience-page/experience-page.component';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { AppDarkModeToggleComponent } from './app-dark-mode-toggle/app-dark-mode-toggle.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { AppDarkModeToggleComponent } from './app-dark-mode-toggle/app-dark-mode
     MatSlideToggleModule,
     MatMenuModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

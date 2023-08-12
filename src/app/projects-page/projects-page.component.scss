@@ -29,6 +29,16 @@ mat-card {
         justify-content: center;
         padding-bottom: .5rem;
     }
+    mat-panel-description {
+        display: flex;
+        justify-content: center;
+        margin-right: 0 !important;
+    }
+    mat-expansion-panel,
+    mat-panel-description {
+        background-color: inherit !important;
+        color: inherit !important;
+    }
     mat-card-content {
         padding: 1rem 0;
     }

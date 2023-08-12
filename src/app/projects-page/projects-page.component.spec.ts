@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatCardModule } from '@angular/material/card';
 import { ProjectsPageComponent } from './projects-page.component';
 import { By } from '@angular/platform-browser';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ProjectsPageComponent', () => {
   let component: ProjectsPageComponent;
@@ -10,7 +12,7 @@ describe('ProjectsPageComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ProjectsPageComponent],
-      imports: [MatCardModule]
+      imports: [MatCardModule, MatExpansionModule, BrowserAnimationsModule]
     });
     fixture = TestBed.createComponent(ProjectsPageComponent);
     component = fixture.componentInstance;

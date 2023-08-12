@@ -11,7 +11,7 @@ export class ExperiencePageComponent {
   darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
   internship = "Software Engineer Intern - Entegral (May 2023 - August 2023)"
   internshipTopics = ["Engineered and deployed captivating user interface features using Angular TypeScript, while seamlessly integrating cutting-edge API endpoints and functionalities within Java Spring Boot.",
-  "Contributed to the development of an internal tool, including establishing a continuous integration and development pipeline on GitLab, designing a Dockerfile, organizing file structure, and tracking business value metrics for data integrity assurance.",
+  "Contributed to the development of an internal machine learning tool used to clean body shop data. This includes creating a Gitlab ci/cd pipeline, establishing connection to, storing data with, and deploying workloads into Google Cloud Platform, as well as adding documentation, linting and metric collection to the tool.",
   "Enhanced my professional development by actively participating in weekly hour-long technology seminars covering a diverse range of topics such as microservice architecture, machine learning, and cloud deployment.",
   "Collaborated with business representatives in bi-weekly meetings to showcase ongoing progress towards quarterly objectives and deliver captivating demonstrations of new features to stakeholders."
   ]
