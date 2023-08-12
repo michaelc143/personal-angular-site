@@ -22,6 +22,40 @@
     <mat-card>
         <mat-card-header>
             <mat-card-title>
+                {{employeeTitle}}
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/emp-api.png">
+        <mat-card-content class="api-links">
+            <a href="https://github.com/michaelc143/EmployeePayrollFrontend" target="_blank" matTooltip="Click here for source code!">
+                <span>{{sourceCodeMsg}} (Frontend in angular)</span>
+            </a>
+            <a href="https://github.com/michaelc143/EmployeePayrollApi" target="_blank" matTooltip="Click here for source code!">
+                <span>{{sourceCodeMsg}} (API in spring boot)</span>
+            </a>
+            <span>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                    (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                        <mat-panel-description *ngIf="!panelOpenState">
+                            Open here for more information!
+                        </mat-panel-description>
+                        <mat-panel-description *ngIf="panelOpenState">
+                            Close the expansion panel here!
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                        <p>This is a project that I have been working on for a couple weeks that uses
+                            both SpringBoot and Angular to create an employee payroll application.
+                            This project has allowed me to gain confidence and knowledge about working
+                            with APIs and how to make Angular work with them.
+                        </p>
+                    </mat-expansion-panel>
+            </span>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
                 {{watchTitle}}
             </mat-card-title>
         </mat-card-header>
@@ -62,40 +96,6 @@
                     <span>{{sourceCodeMsg}}</span>
                 </a>
             </div>
-        </mat-card-content>
-    </mat-card>
-    <mat-card>
-        <mat-card-header>
-            <mat-card-title>
-                {{employeeTitle}}
-            </mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/employee-api.png">
-        <mat-card-content class="api-links">
-            <a href="https://github.com/michaelc143/EmployeePayrollFrontend" target="_blank" matTooltip="Click here for source code!">
-                <span>{{sourceCodeMsg}} (Frontend in angular)</span>
-            </a>
-            <a href="https://github.com/michaelc143/EmployeePayrollApi" target="_blank" matTooltip="Click here for source code!">
-                <span>{{sourceCodeMsg}} (API in spring boot)</span>
-            </a>
-            <span>
-                <mat-expansion-panel (opened)="panelOpenState = true"
-                                    (closed)="panelOpenState = false">
-                    <mat-expansion-panel-header>
-                        <mat-panel-description *ngIf="!panelOpenState">
-                            Open here for more information!
-                        </mat-panel-description>
-                        <mat-panel-description *ngIf="panelOpenState">
-                            Close the expansion panel here!
-                        </mat-panel-description>
-                    </mat-expansion-panel-header>
-                        <p>This is a project that I have been working on for a couple weeks that uses
-                            both SpringBoot and Angular to create an employee payroll application.
-                            This project has allowed me to gain confidence and knowledge about working
-                            with APIs and how to make Angular work with them.
-                        </p>
-                    </mat-expansion-panel>
-            </span>
         </mat-card-content>
     </mat-card>
 </div>
