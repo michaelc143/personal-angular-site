@@ -9,7 +9,8 @@
 .chips-list {
     display: flex;
     justify-content: center !important;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
 
 mat-chip {

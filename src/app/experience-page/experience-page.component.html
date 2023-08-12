@@ -25,9 +25,15 @@
                     <img matChipAvatar *ngIf="lang === 'HTML & CSS'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/html-css-icon.png">
                 </mat-chip>
             </mat-chip-listbox>
+            <mat-chip-listbox>
+                <mat-chip>
+                    <p>{{htmlAndCss}}</p>
+                    <img matChipAvatar height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/html-css-icon.png">
+                </mat-chip>
+            </mat-chip-listbox>
         </div>
         <h2>{{frameworksTitle}}</h2>
-            <div class="chips-list">
+        <div class="chips-list">
             <mat-chip-listbox>
                 <mat-chip *ngFor="let framework of frameworksList">
                     {{framework}}
@@ -37,18 +43,23 @@
                     <img matChipAvatar *ngIf="framework === 'Three.JS'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/threejs-logo.png">
                 </mat-chip>
             </mat-chip-listbox>
-            </div>
+        </div>
         <h2>{{otherToolsTitle}}</h2>
-            <div class="chips-list">
+        <div class="chips-list">
             <mat-chip-listbox>
                 <mat-chip *ngFor="let tool of otherToolsList">
                     {{tool}}
                     <img matChipAvatar *ngIf="tool === 'Git'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/git%20logo.png">
                     <img matChipAvatar *ngIf="tool === 'Docker'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/ad77ae7808b31523a8635f5524b2b6bfbb714318/src/app/logos/docker-logo.svg">
                     <img matChipAvatar *ngIf="tool === 'Bash'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/bash-logo.png">
-                    <img matChipAvatar *ngIf="tool === 'Google Cloud Platform'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/gcp-icon.png">
                     <img matChipAvatar *ngIf="tool === 'CI/CD Deployments'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/cicd-logo.png">
                 </mat-chip>
             </mat-chip-listbox>
-            </div>
+            <mat-chip-listbox>
+                <mat-chip>
+                    <p>{{gcp}}</p>
+                    <img matChipAvatar src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/gcp-icon.png">
+                </mat-chip>
+            </mat-chip-listbox>
+        </div>
 </div>
