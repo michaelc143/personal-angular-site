@@ -38,10 +38,10 @@
                                     (closed)="panelOpenStateApi = false">
                     <mat-expansion-panel-header>
                         <mat-panel-description *ngIf="!panelOpenStateApi">
-                            Open here for more information!
+                            {{openMeMsg}}
                         </mat-panel-description>
                         <mat-panel-description *ngIf="panelOpenStateApi">
-                            Close the expansion panel here!
+                            {{closeMeMsg}}
                         </mat-panel-description>
                     </mat-expansion-panel-header>
                         <p>This is a project that I have been working on for a couple weeks that uses
@@ -56,7 +56,7 @@
     <mat-card>
         <mat-card-header>
             <mat-card-title>
-                {{employeeTitle}}
+                {{machineLearningTitle}}
             </mat-card-title>
         </mat-card-header>
         <img mat-card-image src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/roadMachineLearning.png">
@@ -68,10 +68,10 @@
                                     (closed)="panelOpenStateAi = false">
                     <mat-expansion-panel-header>
                         <mat-panel-description *ngIf="!panelOpenStateAi">
-                            Open here for more information!
+                            {{openMeMsg}}
                         </mat-panel-description>
                         <mat-panel-description *ngIf="panelOpenStateAi">
-                            Close the expansion panel here!
+                            {{closeMeMsg}}
                         </mat-panel-description>
                     </mat-expansion-panel-header>
                         <p>
@@ -90,7 +90,7 @@
         </mat-card-header>
         <img mat-card-image src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/watch-animate.png">
         <mat-card-content>
-            <div class="react-links">
+            <div class="watch-links">
                 <a href="https://github.com/michaelc143/Computer-Graphics-Fall-2022/tree/main/Project%202" target="_blank" matTooltip="Click here for source code!">
                     <span>{{sourceCodeMsg}}</span>
                 </a>
@@ -105,7 +105,7 @@
         </mat-card-header>
         <img mat-card-image src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/ship-animate.png">
         <mat-card-content>
-            <div class="react-links">
+            <div class="ship-links">
                 <a href="https://github.com/michaelc143/Computer-Graphics-Fall-2022/tree/main/Project%204" target="_blank" matTooltip="Click here for source code!">
                     <span>{{sourceCodeMsg}}</span>
                 </a>
@@ -120,7 +120,7 @@
         </mat-card-header>
         <img mat-card-image src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/tri-animate.png">
         <mat-card-content>
-            <div class="react-links">
+            <div class="triangle-links">
                 <a href="https://github.com/michaelc143/Computer-Graphics-Fall-2022/tree/main/Project%207" target="_blank" matTooltip="Click here for source code!">
                     <span>{{sourceCodeMsg}}</span>
                 </a>

@@ -56,6 +56,10 @@ describe('AppComponent', () => {
     expect(fixture.debugElement.query(By.css('router-outlet'))).toBeTruthy();
   });
 
+  it('should generate the dark mode button', () => {
+    expect(fixture.debugElement.query(By.css('app-app-dark-mode-toggle'))).toBeTruthy();
+  });
+
   it('should generate the home button', () => {
     expect(fixture.debugElement.query(By.css('.homeBtn'))).toBeTruthy();
   });

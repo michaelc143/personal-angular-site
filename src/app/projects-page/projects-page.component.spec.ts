@@ -38,7 +38,7 @@ describe('ProjectsPageComponent', () => {
     component = fixture.componentInstance;
     expect(component.reactTitle).toBeTruthy();
     expect(component.reactTitle).toEqual("Personal Resume Site in React");
-    expect(fixture.nativeElement.querySelector('.react-proj-image')).toBeTruthy;
+    expect(fixture.nativeElement.querySelector('.react-links')).toBeTruthy();
   });
 
   it('should have watch animation project', () => {
@@ -46,6 +46,36 @@ describe('ProjectsPageComponent', () => {
     component = fixture.componentInstance;
     expect(component.watchTitle).toBeTruthy();
     expect(component.watchTitle).toEqual("Watch Animation using OpenGl");
-    expect(fixture.nativeElement.querySelector('.watch-proj-img')).toBeTruthy;
+    expect(fixture.nativeElement.querySelector('.watch-links')).toBeTruthy();
   });
+
+  it('should have ship animation project', () => {
+    const fixture = TestBed.createComponent(ProjectsPageComponent);
+    component = fixture.componentInstance;
+    expect(component.shipTitle).toBeTruthy();
+    expect(component.shipTitle).toEqual("Space Ship Animation using OpenGl");
+    expect(fixture.nativeElement.querySelector('.ship-links')).toBeTruthy();
+  });
+
+  it('should have triangle animation project', () => {
+    const fixture = TestBed.createComponent(ProjectsPageComponent);
+    component = fixture.componentInstance;
+    expect(component.triangleTitle).toBeTruthy();
+    expect(component.triangleTitle).toEqual("Moveable Triangle Animation using Opengl");
+    expect(fixture.nativeElement.querySelector('.triangle-links')).toBeTruthy();
+  });
+
+  it('should have the employee api project', () => {
+    const fixture = TestBed.createComponent(ProjectsPageComponent);
+    component = fixture.componentInstance;
+    expect(fixture.nativeElement.querySelector('.api-links')).toBeTruthy();
+  });
+
+  it('should have the machine learning road project', () => {
+    const fixture = TestBed.createComponent(ProjectsPageComponent);
+    component = fixture.componentInstance;
+    expect(component.machineLearningTitle).toEqual("Clean/Dirty Roads Machine Learning Model");
+    expect(fixture.nativeElement.querySelector('.machine-learning-links')).toBeTruthy();
+  });
+
 });
