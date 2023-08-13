@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from "@angular/platform-browser";
 import { MatIconModule } from "@angular/material/icon";
 
-describe('ExperiencePageComponent', () => {
+describe('DarkModeComponent', () => {
     let component: AppDarkModeToggleComponent;
     let fixture: ComponentFixture<AppDarkModeToggleComponent>;
 
