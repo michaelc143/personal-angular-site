@@ -34,13 +34,13 @@
                 <span>{{sourceCodeMsg}} (API in spring boot)</span>
             </a>
             <span>
-                <mat-expansion-panel (opened)="panelOpenState = true"
-                                    (closed)="panelOpenState = false">
+                <mat-expansion-panel (opened)="panelOpenStateApi = true"
+                                    (closed)="panelOpenStateApi = false">
                     <mat-expansion-panel-header>
-                        <mat-panel-description *ngIf="!panelOpenState">
+                        <mat-panel-description *ngIf="!panelOpenStateApi">
                             Open here for more information!
                         </mat-panel-description>
-                        <mat-panel-description *ngIf="panelOpenState">
+                        <mat-panel-description *ngIf="panelOpenStateApi">
                             Close the expansion panel here!
                         </mat-panel-description>
                     </mat-expansion-panel-header>
@@ -49,8 +49,37 @@
                             This project has allowed me to gain confidence and knowledge about working
                             with APIs and how to make Angular work with them.
                         </p>
-                    </mat-expansion-panel>
+                </mat-expansion-panel>
             </span>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                {{employeeTitle}}
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/roadMachineLearning.png">
+        <mat-card-content class="machine-learning-links">
+            <a href="https://github.com/michaelc143/roads-machine-learning" target="_blank" matTooltip="Click here for source code!">
+                <span>{{sourceCodeMsg}} (Machine Learning Model)</span>
+            </a>
+            <mat-expansion-panel (opened)="panelOpenStateAi = true"
+                                    (closed)="panelOpenStateAi = false">
+                    <mat-expansion-panel-header>
+                        <mat-panel-description *ngIf="!panelOpenStateAi">
+                            Open here for more information!
+                        </mat-panel-description>
+                        <mat-panel-description *ngIf="panelOpenStateAi">
+                            Close the expansion panel here!
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                        <p>
+                            This is a project that I have been working on for a few days that 
+                            takes in images of roads as input and creates a machine learning 
+                            model that identifies whether the road in the image is clean or dirty.
+                        </p>
+                    </mat-expansion-panel>
         </mat-card-content>
     </mat-card>
     <mat-card>

@@ -12,5 +12,6 @@ export class ProjectsPageComponent {
     triangleTitle: String = "Moveable Triangle Animation using Opengl";
     employeeTitle: String = "Empoyee Payroll API with Angular UI"
     sourceCodeMsg: String = "Source Code Here!";
-    panelOpenState = false;
+    panelOpenStateApi = false;
+    panelOpenStateAi = false;
 }
