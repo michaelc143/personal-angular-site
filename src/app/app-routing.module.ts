@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'experience', component: ExperiencePageComponent },
   { path: 'projects', component: ProjectsPageComponent },
+  { path: '**', redirectTo:'', pathMatch: 'full'},
 ];
 
 @NgModule({

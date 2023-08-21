@@ -7,6 +7,14 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.homebuttondiv {
+    display: flex;
+    align-items: center;
+    mat-icon {
+        margin-left: 0.25rem;
+    }
+}
+
 .linkedin-logo {
     height: 30px;
     width: 30px;
