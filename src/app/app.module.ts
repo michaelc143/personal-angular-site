@@ -17,6 +17,7 @@ import { ExperiencePageComponent } from './experience-page/experience-page.compo
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { AppDarkModeToggleComponent } from './app-dark-mode-toggle/app-dark-mode-toggle.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     HomePageComponent,
     ExperiencePageComponent,
     ProjectsPageComponent,
-    AppDarkModeToggleComponent
+    AppDarkModeToggleComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
