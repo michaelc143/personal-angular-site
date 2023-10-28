@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DarkModeService } from 'angular-dark-mode';
 
 @Component({
   selector: 'app-projects-page',
@@ -6,6 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./projects-page.component.scss']
 })
 export class ProjectsPageComponent {
+
+  isDarkMode: boolean = false;
+
+  constructor(private darkModeService: DarkModeService) {}
+
+  ngOnInit() {
+    this.darkModeService.darkMode$.subscribe((darkMode: boolean) => {
+      this.isDarkMode = darkMode;
+    });
+  }
+
     reactTitle: String = "Personal Resume Site in React";
     watchTitle: String = "Watch Animation using OpenGl";
     shipTitle: String = "Space Ship Animation using OpenGl";

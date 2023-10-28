@@ -19,6 +19,11 @@
     }
 }
 
+.dark-mode-card {
+    background-color: #552582;
+    transition: background-color 0.5s ease;
+}
+
 mat-card {
     text-align: center;
     background-color: inherit;

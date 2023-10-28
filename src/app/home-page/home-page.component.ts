@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DarkModeService } from 'angular-dark-mode';
 
 @Component({
   selector: 'app-home-page',
@@ -6,6 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
+
+  isDarkMode: boolean = false;
+
+  constructor(private darkModeService: DarkModeService) {}
+
+  ngOnInit() {
+    this.darkModeService.darkMode$.subscribe((darkMode: boolean) => {
+      this.isDarkMode = darkMode;
+    });
+  }
+
   welcomeHeader: String = "Welcome to my website!";
   toolbarTip: String = "Use the toolbar above to navigate to other pages";
   para1: String = "Hello, I'm Michael! I'm a web developer and 4th-year computer science student at UW Madison, specializing in Angular, React, Python and Java."
