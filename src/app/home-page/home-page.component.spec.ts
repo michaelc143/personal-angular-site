@@ -29,13 +29,13 @@ describe('HomePageComponent', () => {
   it('should generate the angular material card title h1', () => {
     const h1 = fixture.debugElement.query(By.css('mat-card-title h1'));
     const compiled = h1.nativeElement as HTMLElement;
-    expect(compiled.textContent).toBe("Welcome to my website!");
+    expect(compiled.textContent).toBe("Hey, I'm Michael!");
   });
 
   it('should generate the angular material card title h2', () => {
     const h2 = fixture.debugElement.query(By.css('mat-card-title h2'));
     const compiled = h2.nativeElement as HTMLElement;
-    expect(compiled.textContent).toBe("Use the toolbar above to navigate to other pages");
+    expect(compiled.textContent).toBe("Use the toolbar to navigate to other pages!");
   });
 
   it('should generate the angular material card image', () => {

@@ -18,8 +18,8 @@ export class HomePageComponent {
     });
   }
 
-  welcomeHeader: String = "Welcome to my website!";
-  toolbarTip: String = "Use the toolbar above to navigate to other pages";
-  para1: String = "Hello, I'm Michael! I'm a web developer and 4th-year computer science student at UW Madison, specializing in Angular, React, Python and Java."
+  welcomeHeader: String = "Hey, I'm Michael!";
+  toolbarTip: String = "Use the toolbar to navigate to other pages!";
+  para1: String = "I'm a 4th-year computer science student at UW Madison, with a passion for web development using frameworks like Angular and React, API development in Java Spring Boot, as well as machine learning and data science with Python."
   para2: String = "Dedicated to providing top-notch solutions, I keep myself well-informed about the latest industry trends and cutting-edge technologies. Whether it involves building projects from the ground up or improving existing ones, I'm enthusiastic about teaming up for demanding web development challenges.";
 }
