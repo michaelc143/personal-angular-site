@@ -3,6 +3,7 @@ import { ExperiencePageComponent } from "./experience-page.component";
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatDividerModule } from "@angular/material/divider";
 import { By } from "@angular/platform-browser";
+import { MatBadgeModule } from "@angular/material/badge";
 
 describe('ExperiencePageComponent', () => {
     let component: ExperiencePageComponent;
@@ -11,7 +12,7 @@ describe('ExperiencePageComponent', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             declarations: [ExperiencePageComponent],
-            imports: [MatChipsModule, MatDividerModule]
+            imports: [MatChipsModule, MatDividerModule, MatBadgeModule]
         });
         fixture = TestBed.createComponent(ExperiencePageComponent);
         component = fixture.componentInstance;
