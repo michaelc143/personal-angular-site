@@ -18,6 +18,7 @@ import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { AppDarkModeToggleComponent } from './app-dark-mode-toggle/app-dark-mode-toggle.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatMenuModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
