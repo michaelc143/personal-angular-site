@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatCardModule } from '@angular/material/card';
-import { ProjectsPageComponent } from './projects-page.component';
+import { ProjectsPageComponent } from 'src/app/projects-page/projects-page.component';
 import { By } from '@angular/platform-browser';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

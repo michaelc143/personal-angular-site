@@ -1,5 +1,5 @@
 import { MatChipsModule } from "@angular/material/chips";
-import { ExperiencePageComponent } from "./experience-page.component";
+import { ExperiencePageComponent } from "src/app/experience-page/experience-page.component";
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatDividerModule } from "@angular/material/divider";
 import { By } from "@angular/platform-browser";

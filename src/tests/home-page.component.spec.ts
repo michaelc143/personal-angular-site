@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { HomePageComponent } from './home-page.component';
+import { HomePageComponent } from 'src/app/home-page/home-page.component';
 import { MatCardModule } from '@angular/material/card';
 import { By } from '@angular/platform-browser';
 

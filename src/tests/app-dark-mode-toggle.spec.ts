@@ -1,4 +1,4 @@
-import { AppDarkModeToggleComponent } from "./app-dark-mode-toggle.component";
+import { AppDarkModeToggleComponent } from "src/app/app-dark-mode-toggle/app-dark-mode-toggle.component";
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from "@angular/platform-browser";
 import { MatIconModule } from "@angular/material/icon";
