@@ -26,6 +26,11 @@
 
 mat-card {
     text-align: center;
+    display: flex;
+    align-items: center;
+    img {
+        max-width: 90%;
+    }
     background-color: inherit;
     border-radius: 2rem;
     margin-left: auto;
