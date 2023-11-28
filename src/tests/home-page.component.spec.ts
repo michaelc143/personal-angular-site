@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomePageComponent } from 'src/app/home-page/home-page.component';
 import { MatCardModule } from '@angular/material/card';
 import { By } from '@angular/platform-browser';
+import { HoverEffectComponent } from 'src/app/hover-effect/hover-effect.component';
 
 describe('HomePageComponent', () => {
   let component: HomePageComponent;
@@ -9,7 +10,7 @@ describe('HomePageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HomePageComponent],
+      declarations: [HomePageComponent, HoverEffectComponent],
       imports: [MatCardModule]
     });
     fixture = TestBed.createComponent(HomePageComponent);
@@ -21,14 +22,14 @@ describe('HomePageComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should generate the angular material card', () => {
-    expect(fixture.debugElement.query(By.css('mat-card'))).toBeTruthy();
+  it('should generate hover effect h1', () => {
+    const h1 = fixture.debugElement.query(By.css('h1'));
+    const compiled = h1.nativeElement as HTMLElement;
+    expect(compiled.textContent).toBe("Hey Im Michael!");
   });
 
-  it('should generate the angular material card title h1', () => {
-    const h1 = fixture.debugElement.query(By.css('mat-card-title h1'));
-    const compiled = h1.nativeElement as HTMLElement;
-    expect(compiled.textContent).toBe("Hey, I'm Michael!");
+  it('should generate the angular material card', () => {
+    expect(fixture.debugElement.query(By.css('mat-card'))).toBeTruthy();
   });
 
   it('should generate the angular material card title h2', () => {

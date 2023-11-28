@@ -19,6 +19,7 @@ import { AppDarkModeToggleComponent } from './app-dark-mode-toggle/app-dark-mode
 import {MatExpansionModule} from '@angular/material/expansion';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {MatBadgeModule} from '@angular/material/badge';
+import { HoverEffectComponent } from './hover-effect/hover-effect.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     ExperiencePageComponent,
     ProjectsPageComponent,
     AppDarkModeToggleComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HoverEffectComponent
   ],
   imports: [
     BrowserModule,
