@@ -25,7 +25,7 @@ describe('HomePageComponent', () => {
   it('should generate hover effect h1', () => {
     const h1 = fixture.debugElement.query(By.css('h1'));
     const compiled = h1.nativeElement as HTMLElement;
-    expect(compiled.textContent).toBe("Hey Im Michael!");
+    expect(compiled.textContent).toBe("Hey I'm Michael!");
   });
 
   it('should generate the angular material card', () => {
