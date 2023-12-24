@@ -13,6 +13,26 @@
     <mat-card [ngClass]="{'dark-mode-card': isDarkMode}">
         <mat-card-header>
             <mat-card-title>
+                BasketballReference Python Package
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/bballPackage.png">
+        <mat-card-content>
+            <div class="borb-links">
+                <a href="https://github.com/michaelc143/BballRefWebScraper" target="_blank" matTooltip="Click here for source code!">
+                    <p>{{sourceCodeMsg}}</p>
+                </a>
+            </div>
+            <div class="borb-links">
+                <a href="https://pypi.org/project/bballRefWebScraper/">
+                    <span>PyPi Link Here!</span>
+                </a>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card [ngClass]="{'dark-mode-card': isDarkMode}">
+        <mat-card-header>
+            <mat-card-title>
                 BorbChat
             </mat-card-title>
         </mat-card-header>

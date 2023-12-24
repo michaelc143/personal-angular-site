@@ -30,7 +30,7 @@ describe('ProjectsPageComponent', () => {
 
   it('should have the correct number of proj cards', () => {
     const fixture = TestBed.createComponent(ProjectsPageComponent);
-    expect(fixture.debugElement.queryAll(By.css('mat-card')).length).toEqual(7);
+    expect(fixture.debugElement.queryAll(By.css('mat-card')).length).toEqual(8);
   });
 
   it('should have borb chat', () => {
