@@ -17,7 +17,7 @@ export class ProjectsPageComponent {
       this.isDarkMode = darkMode;
     });
   }
-
+    projectsHeader: String = "Here's some of my open source projects with the source code linked in the titles!";
     reactTitle: String = "Personal Resume Site in React";
     watchTitle: String = "Watch Animation using OpenGl";
     shipTitle: String = "Space Ship Animation using OpenGl";

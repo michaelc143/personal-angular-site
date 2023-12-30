@@ -7,9 +7,9 @@
 
   gtag('config', 'G-FL9923MFTY');
 </script>
-<div class="projects-page">
-    <h1 class="projects-title">Projects</h1>
-    <h3>Here's some of my open source projects with the source code linked in the titles!</h3>
+<div class="projects-page fade-in-text">
+    <h1 class="projects-title bouncing-text">Projects</h1>
+    <h3 class="projects-header">{{ projectsHeader }}</h3>
     <mat-card [ngClass]="{'dark-mode-card': isDarkMode}">
         <mat-card-header>
             <mat-card-title>
@@ -88,7 +88,7 @@
                             {{closeMeMsg}}
                         </mat-panel-description>
                     </mat-expansion-panel-header>
-                        <p>This is a project that I have been working on for a couple weeks that uses
+                        <p>This is a WIP that uses
                             both SpringBoot and Angular to create an employee payroll application.
                             This project has allowed me to gain confidence and knowledge about working
                             with APIs and how to make Angular work with them.
