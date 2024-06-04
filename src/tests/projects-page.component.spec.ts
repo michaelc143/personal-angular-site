@@ -30,7 +30,7 @@ describe('ProjectsPageComponent', () => {
 
   it('should have the correct number of proj cards', () => {
     const fixture = TestBed.createComponent(ProjectsPageComponent);
-    expect(fixture.debugElement.queryAll(By.css('mat-card')).length).toEqual(8);
+    expect(fixture.debugElement.queryAll(By.css('mat-card')).length).toEqual(6);
   });
 
   it('should have borb chat', () => {
@@ -53,22 +53,6 @@ describe('ProjectsPageComponent', () => {
     expect(component.watchTitle).toBeTruthy();
     expect(component.watchTitle).toEqual("Watch Animation using OpenGl");
     expect(fixture.nativeElement.querySelector('.watch-links')).toBeTruthy();
-  });
-
-  it('should have ship animation project', () => {
-    const fixture = TestBed.createComponent(ProjectsPageComponent);
-    component = fixture.componentInstance;
-    expect(component.shipTitle).toBeTruthy();
-    expect(component.shipTitle).toEqual("Space Ship Animation using OpenGl");
-    expect(fixture.nativeElement.querySelector('.ship-links')).toBeTruthy();
-  });
-
-  it('should have triangle animation project', () => {
-    const fixture = TestBed.createComponent(ProjectsPageComponent);
-    component = fixture.componentInstance;
-    expect(component.triangleTitle).toBeTruthy();
-    expect(component.triangleTitle).toEqual("Moveable Triangle Animation using Opengl");
-    expect(fixture.nativeElement.querySelector('.triangle-links')).toBeTruthy();
   });
 
   it('should have the employee api project', () => {
