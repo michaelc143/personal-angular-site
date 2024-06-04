@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomePageComponent } from 'src/app/home-page/home-page.component';
 import { MatCardModule } from '@angular/material/card';
 import { By } from '@angular/platform-browser';
-import { HoverEffectComponent } from 'src/app/hover-effect/hover-effect.component';
 
 describe('HomePageComponent', () => {
   let component: HomePageComponent;
@@ -10,7 +9,7 @@ describe('HomePageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HomePageComponent, HoverEffectComponent],
+      declarations: [HomePageComponent],
       imports: [MatCardModule]
     });
     fixture = TestBed.createComponent(HomePageComponent);

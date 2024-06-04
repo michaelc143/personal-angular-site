@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { DarkModeService } from 'angular-dark-mode';
-import { HoverEffectComponent } from '../hover-effect/hover-effect.component';
 
 @Component({
   selector: 'app-home-page',

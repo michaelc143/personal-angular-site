@@ -63,8 +63,4 @@ describe('AppComponent', () => {
   it('should generate the home button', () => {
     expect(fixture.debugElement.query(By.css('.homeBtn'))).toBeTruthy();
   });
-
-  // it('should generate the footer waves', () => {
-  //   expect(fixture.debugElement.query(By.css('.footer-waves'))).toBeTruthy();
-  // });
 });
