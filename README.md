@@ -1,5 +1,7 @@
 # PersonalAngularSite
 
+![Build and Test](https://github.com/michaelc143/personal-angular-site/actions/workflows/docker-image.yml/badge.svg)
+
 This project is a side hobby being worked on over the course of Summer 2023 while working full-time. If you discover any bugs or have any questions at all, feel free to email me at mcorbishley@wisc.edu
 
 ## Installation
