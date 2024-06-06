@@ -30,7 +30,7 @@ describe('ProjectsPageComponent', () => {
 
   it('should have the correct number of proj cards', () => {
     const fixture = TestBed.createComponent(ProjectsPageComponent);
-    expect(fixture.debugElement.queryAll(By.css('mat-card')).length).toEqual(7);
+    expect(fixture.debugElement.queryAll(By.css('mat-card')).length).toEqual(8);
   });
 
   it('should have borb chat', () => {
@@ -45,6 +45,14 @@ describe('ProjectsPageComponent', () => {
     expect(component.appTemplateTitle).toBeTruthy();
     expect(component.appTemplateTitle).toEqual("WebApp Template");
     expect(fixture.nativeElement.querySelector('.template-links')).toBeTruthy();
+  });
+
+  it('should have euchre project', () => {
+    const fixture = TestBed.createComponent(ProjectsPageComponent);
+    component = fixture.componentInstance;
+    expect(component.euchreTitle).toBeTruthy();
+    expect(component.euchreTitle).toEqual("Euchre Card Engine");
+    expect(fixture.nativeElement.querySelector('.euchre-links')).toBeTruthy();
   });
 
   it('should have bball project', () => {
