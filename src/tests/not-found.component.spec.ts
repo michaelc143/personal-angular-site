@@ -1,16 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { Router } from '@angular/router';
 import { NotFoundComponent } from 'src/app/not-found/not-found.component';
 
 describe('NotFoundComponent', () => {
   let component: NotFoundComponent;
   let fixture: ComponentFixture<NotFoundComponent>;
-  let router: Router;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
       declarations: [NotFoundComponent],
     }).compileComponents();
   });
@@ -18,7 +14,6 @@ describe('NotFoundComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(NotFoundComponent);
     component = fixture.componentInstance;
-    router = TestBed.inject(Router);
     fixture.detectChanges();
   });
 
@@ -26,9 +21,15 @@ describe('NotFoundComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should navigate to home when navigateToHome is called', () => {
-    spyOn(router, 'navigate');
-    component.navigateToHome();
-    expect(router.navigate).toHaveBeenCalledWith(['/']);
+  it('should have h1 element', () => {
+    const h1Element = fixture.nativeElement.querySelector('h1');
+    expect(h1Element).toBeTruthy();
+    expect(h1Element.textContent).toContain('404 - Page Not Found');
+  });
+
+  it('should have p element', () => {
+    const pElement = fixture.nativeElement.querySelector('p');
+    expect(pElement).toBeTruthy();
+    expect(pElement.textContent).toContain('Sorry, the page you are looking for does not exist.');
   });
 });
