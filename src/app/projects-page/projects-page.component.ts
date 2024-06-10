@@ -17,19 +17,20 @@ export class ProjectsPageComponent {
       this.isDarkMode = darkMode;
     });
   }
-    projectsHeader: String = "Here's some of my open source projects with the source code linked in the titles!";
-    appTemplateTitle: string = "WebApp Template";
-    euchreTitle: String = "Euchre Card Engine";
-    bballTitle: String = "BasketballReference Python Package";
-    reactTitle: String = "Personal Resume Site in React";
-    watchTitle: String = "Watch Animation using OpenGl";
-    shipTitle: String = "Space Ship Animation using OpenGl";
-    triangleTitle: String = "Moveable Triangle Animation using Opengl";
-    employeeTitle: String = "Employee Payroll App"
-    sourceCodeMsg: String = "Source Code Here!";
-    panelOpenStateApi = false;
-    panelOpenStateAi = false;
-    openMeMsg: String = "Open here for more information!"
-    closeMeMsg: String = "Close the expansion panel here!"
-    machineLearningTitle: String = "Clean/Dirty Roads Machine Learning Model"
+
+  projectsHeader: String = "Here's some of my open source projects with the source code linked in the titles!";
+  appTemplateTitle: string = "WebApp Template";
+  euchreTitle: String = "Euchre Card Engine";
+  bballTitle: String = "BasketballReference Python Package";
+  reactTitle: String = "Personal Resume Site in React";
+  watchTitle: String = "Watch Animation using OpenGl";
+  shipTitle: String = "Space Ship Animation using OpenGl";
+  triangleTitle: String = "Moveable Triangle Animation using Opengl";
+  employeeTitle: String = "Employee Payroll App"
+  sourceCodeMsg: String = "Source Code Here!";
+  panelOpenStateApi = false;
+  panelOpenStateAi = false;
+  openMeMsg: String = "Open here for more information!"
+  closeMeMsg: String = "Close the expansion panel here!"
+  machineLearningTitle: String = "Clean/Dirty Roads Machine Learning Model"
 }
