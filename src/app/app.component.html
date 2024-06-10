@@ -16,27 +16,27 @@
     </div>
     <button mat-button [matMenuTriggerFor]="menu" class="menu-btn">Pages</button>
     <mat-menu #menu="matMenu">
-    <a aria-label="experience" class="experience-div" routerLink="experience" matRipple [matRippleCentered]="true" matTooltip="My experience in software!">
-      <span mat-menu-item class="exp-and-skills">Experience & Skills
-        <mat-icon>work</mat-icon>
-      </span>
-    </a>
-    <a aria-label="projects" class="skills-div" routerLink="projects" matRipple [matRippleCentered]="true" matTooltip="Some of my previous projects!">
-      <span mat-menu-item class="projects-link">Projects
-        <mat-icon>gesture</mat-icon>
-      </span>
-    </a>
-    <a aria-label="resume" target="_blank" href="https://drive.google.com/file/d/16CjyRLFt4vX2CtK5g5ZcPoJVP7FxwYT6/view" matRipple [matRippleCentered]="true" matTooltip="My resume!">
-      <span mat-menu-item class="contact-link">Resume
-      <mat-icon>business</mat-icon>
-      </span>
-    </a>
-    <a href="mailto:mcorbishley@wisc.edu" matRipple [matRippleCentered]="true" matTooltip="Click here to email me!">
-      <span mat-menu-item class="contact-link">Contact me here!
-      <mat-icon>email</mat-icon>
-      </span>
-    </a>
-  </mat-menu>
+      <a aria-label="experience" class="experience-div" routerLink="experience" matRipple [matRippleCentered]="true" matTooltip="My experience in software!">
+        <span mat-menu-item class="exp-and-skills">Experience & Skills
+          <mat-icon>work</mat-icon>
+        </span>
+      </a>
+      <a aria-label="projects" class="skills-div" routerLink="projects" matRipple [matRippleCentered]="true" matTooltip="Some of my previous projects!">
+        <span mat-menu-item class="projects-link">Projects
+          <mat-icon>gesture</mat-icon>
+        </span>
+      </a>
+      <a aria-label="resume" target="_blank" href="https://drive.google.com/file/d/16CjyRLFt4vX2CtK5g5ZcPoJVP7FxwYT6/view" matRipple [matRippleCentered]="true" matTooltip="My resume!">
+        <span mat-menu-item class="contact-link">Resume
+        <mat-icon>business</mat-icon>
+        </span>
+      </a>
+      <a href="mailto:mcorbishley@wisc.edu" matRipple [matRippleCentered]="true" matTooltip="Click here to email me!">
+        <span mat-menu-item class="contact-link">Contact me here!
+        <mat-icon>email</mat-icon>
+        </span>
+      </a>
+    </mat-menu>
 </div>
 <router-outlet></router-outlet>
 <footer>
