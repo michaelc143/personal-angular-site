@@ -11,7 +11,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 
 describe('AppComponent', () => {
-  let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
 
   beforeEach(async () => {
