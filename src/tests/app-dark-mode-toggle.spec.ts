@@ -4,30 +4,29 @@ import { By } from "@angular/platform-browser";
 import { MatIconModule } from "@angular/material/icon";
 
 describe('DarkModeComponent', () => {
-    let component: AppDarkModeToggleComponent;
-    let fixture: ComponentFixture<AppDarkModeToggleComponent>;
+  let component: AppDarkModeToggleComponent;
+  let fixture: ComponentFixture<AppDarkModeToggleComponent>;
 
-    beforeEach(() => {
-        TestBed.configureTestingModule({
-            declarations: [AppDarkModeToggleComponent],
-            imports: [MatIconModule]
-        });
-        fixture = TestBed.createComponent(AppDarkModeToggleComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [AppDarkModeToggleComponent],
+      imports: [MatIconModule]
     });
+    fixture = TestBed.createComponent(AppDarkModeToggleComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-    it('should create', () => {
-        expect(component).toBeTruthy();
-    });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 
-    it('should create the button', () => {
-        expect(fixture.nativeElement.querySelector('button')).toBeTruthy();
-    })
+  it('should create the button', () => {
+    expect(fixture.nativeElement.querySelector('button')).toBeTruthy();
+  })
 
-    it('should toggle darkmode', () => {
-        fixture.nativeElement.querySelector('button').click();
-        expect(fixture.nativeElement.querySelector('mat-icon')).toBeTruthy();
-    })
-    
+  it('should toggle darkmode', () => {
+    fixture.nativeElement.querySelector('button').click();
+    expect(fixture.nativeElement.querySelector('mat-icon')).toBeTruthy();
+  })
 });
