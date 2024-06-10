@@ -1,48 +1,48 @@
 <div class="experience-page-div fade-in-text">
-    <h1 class="bouncing-text">Experience</h1>
-        <h2 class="internship-title">{{ internship }}</h2>
-            <p *ngFor="let topic of internshipTopics">{{topic}}</p>
-        <h2>{{ webdevUW }}</h2>
-            <p *ngFor="let topic of webdevUWTopics">{{topic}}</p>
-        <h2>{{degree}}</h2>
-            <p>{{degreeTopic}}</p>
-            <h3>{{degreeCourseTitle}}</h3>
-            <p>{{degreeCourses}}</p>
-        <h2>{{teachingAssistant}}</h2>
-            <p *ngFor="let topic of teachingAssistantTopics"> {{topic}}</p>
-        <mat-divider [ngClass]="{ 'white-divider': darkMode$ | async }"></mat-divider>
-    <h1>Skills & Years of Experience</h1>
-        <h2>{{languagesTitle}}</h2>
-        <div class="chips-list">
-            <mat-chip *ngFor="let lang of languagesList; let i = index" [matBadge]="experienceYearsLangs[i]" matBadgeSize="medium">
-                <p>{{lang}}</p>
-                <img matChipAvatar *ngIf="lang === 'Java'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/java-icon.png">
-                <img matChipAvatar *ngIf="lang === 'JavaScript'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/a9301d9fae2f80222dcc8ce359364846048a6692/src/app/logos/js-logo.svg">
-                <img matChipAvatar *ngIf="lang === 'Python'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/python-logo.png">
-                <img matChipAvatar *ngIf="lang === 'TypeScript'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/typescript-icon.png">
-                <img matChipAvatar *ngIf="lang === 'C'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/c-icon.png">
-                <img matChipAvatar *ngIf="lang === 'HTML & CSS'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/html-css-icon.png">
-            </mat-chip>
-        </div>
-        <h2>{{frameworksTitle}}</h2>
-        <div class="chips-list">
-            <mat-chip *ngFor="let framework of frameworksList; let i = index" [matBadge]="experienceYearsFrames[i]" matBadgeSize="medium">
-                {{framework}}
-                <img matChipAvatar *ngIf="framework === 'Angular'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/angular-logo.png">
-                <img matChipAvatar *ngIf="framework === 'React'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/react-icon.png">
-                <img matChipAvatar *ngIf="framework === 'SpringBoot'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/spring-logo.png">
-                <img matChipAvatar *ngIf="framework === 'Three.JS'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/threejs-logo.png">
-            </mat-chip>
-        </div>
-        <h2>{{otherToolsTitle}}</h2>
-        <div class="chips-list">
-            <mat-chip *ngFor="let tool of otherToolsList; let i = index" [matBadge]="experienceYearsTools[i]" matBadgeSize="medium">
-                {{tool}}
-                <img matChipAvatar *ngIf="tool === 'Git'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/git%20logo.png">
-                <img matChipAvatar *ngIf="tool === 'Docker'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/ad77ae7808b31523a8635f5524b2b6bfbb714318/src/app/logos/docker-logo.svg">
-                <img matChipAvatar *ngIf="tool === 'Bash'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/bash-logo.png">
-                <img matChipAvatar *ngIf="tool === 'CI/CD Deployments'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/cicd-logo.png">
-                <img matChipAvatar *ngIf="tool === 'Google Cloud Platform'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/gcp-icon.png">
-            </mat-chip>
-        </div>
+	<h1 class="bouncing-text">Experience</h1>
+		<h2 class="internship-title">{{ internship }}</h2>
+			<p *ngFor="let topic of internshipTopics">{{topic}}</p>
+		<h2>{{ webdevUW }}</h2>
+			<p *ngFor="let topic of webdevUWTopics">{{topic}}</p>
+		<h2>{{degree}}</h2>
+			<p>{{degreeTopic}}</p>
+			<h3>{{degreeCourseTitle}}</h3>
+			<p>{{degreeCourses}}</p>
+		<h2>{{teachingAssistant}}</h2>
+			<p *ngFor="let topic of teachingAssistantTopics"> {{topic}}</p>
+		<mat-divider [ngClass]="{ 'white-divider': darkMode$ | async }"></mat-divider>
+	<h1>Skills & Years of Experience</h1>
+		<h2>{{languagesTitle}}</h2>
+		<div class="chips-list">
+			<mat-chip *ngFor="let lang of languagesList; let i = index" [matBadge]="experienceYearsLangs[i]" matBadgeSize="medium">
+				<p>{{lang}}</p>
+				<img matChipAvatar *ngIf="lang === 'Java'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/java-icon.png">
+				<img matChipAvatar *ngIf="lang === 'JavaScript'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/a9301d9fae2f80222dcc8ce359364846048a6692/src/app/logos/js-logo.svg">
+				<img matChipAvatar *ngIf="lang === 'Python'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/python-logo.png">
+				<img matChipAvatar *ngIf="lang === 'TypeScript'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/typescript-icon.png">
+				<img matChipAvatar *ngIf="lang === 'C'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/c-icon.png">
+				<img matChipAvatar *ngIf="lang === 'HTML & CSS'" height="18px" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/html-css-icon.png">
+			</mat-chip>
+		</div>
+		<h2>{{frameworksTitle}}</h2>
+		<div class="chips-list">
+			<mat-chip *ngFor="let framework of frameworksList; let i = index" [matBadge]="experienceYearsFrames[i]" matBadgeSize="medium">
+				{{framework}}
+				<img matChipAvatar *ngIf="framework === 'Angular'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/angular-logo.png">
+				<img matChipAvatar *ngIf="framework === 'React'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/react-icon.png">
+				<img matChipAvatar *ngIf="framework === 'SpringBoot'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/spring-logo.png">
+				<img matChipAvatar *ngIf="framework === 'Three.JS'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/threejs-logo.png">
+			</mat-chip>
+		</div>
+		<h2>{{otherToolsTitle}}</h2>
+		<div class="chips-list">
+			<mat-chip *ngFor="let tool of otherToolsList; let i = index" [matBadge]="experienceYearsTools[i]" matBadgeSize="medium">
+				{{tool}}
+				<img matChipAvatar *ngIf="tool === 'Git'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/git%20logo.png">
+				<img matChipAvatar *ngIf="tool === 'Docker'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/ad77ae7808b31523a8635f5524b2b6bfbb714318/src/app/logos/docker-logo.svg">
+				<img matChipAvatar *ngIf="tool === 'Bash'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/bash-logo.png">
+				<img matChipAvatar *ngIf="tool === 'CI/CD Deployments'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/cicd-logo.png">
+				<img matChipAvatar *ngIf="tool === 'Google Cloud Platform'" src="https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/logos/gcp-icon.png">
+			</mat-chip>
+		</div>
 </div>
