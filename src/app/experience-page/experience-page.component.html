@@ -10,7 +10,7 @@
 			<p>{{degreeCourses}}</p>
 		<h2>{{teachingAssistant}}</h2>
 			<p *ngFor="let topic of teachingAssistantTopics"> {{topic}}</p>
-		<mat-divider [ngClass]="{ 'white-divider': darkMode$ | async }"></mat-divider>
+		<mat-divider [ngClass]="{ 'white-divider': isDarkMode}"></mat-divider>
 	<h1>Skills & Years of Experience</h1>
 		<h2>{{languagesTitle}}</h2>
 		<div class="chips-list">

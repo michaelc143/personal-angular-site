@@ -8,7 +8,17 @@ import { Observable } from 'rxjs';
   styleUrls: ['./experience-page.component.scss']
 })
 export class ExperiencePageComponent {
-  darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
+
+  isDarkMode: boolean = false;
+
+  ngOnInit() {
+    this.darkModeService.darkMode$.subscribe((darkMode: boolean) => {
+      this.isDarkMode = darkMode;
+    });
+  }
+
+  constructor(private darkModeService: DarkModeService) {}
+
   internship = "Software Engineer Intern - Entegral (May 2023 - August 2023)"
   internshipTopics = ["Engineered and deployed captivating user interface features using Angular TypeScript, while seamlessly integrating cutting-edge API endpoints and functionalities within Java Spring Boot.",
   "Contributed to the development of an internal machine learning tool used to clean body shop data. This includes creating a Gitlab ci/cd pipeline, establishing connection to, storing data with, and deploying workloads into Google Cloud Platform, as well as adding documentation, linting and metric collection to the tool.",
@@ -36,5 +46,4 @@ export class ExperiencePageComponent {
   experienceYearsLangs = [3,1.5,2.5,1,1,4]
   experienceYearsFrames = [1,1.5,1,1]
   experienceYearsTools = [3,1,2,1,1]
-  constructor(private darkModeService: DarkModeService) {}
 }
