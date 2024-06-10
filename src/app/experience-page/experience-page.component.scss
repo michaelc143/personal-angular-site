@@ -1,62 +1,64 @@
 .experience-page-div {
-    text-align: center;
-    margin-top: 1rem;
-    padding-top: 3.5rem;
-    max-width: 35rem;
-    margin-left: auto;
-    margin-right: auto;
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 3.5rem;
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .chips-list {
-    display: flex;
-    justify-content: center !important;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center !important;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
 }
 
 mat-chip {
-    background-color: #552583 !important;
-    margin: 0.2rem;
+  background-color: #552583 !important;
+  margin: 0.2rem;
 }
 
 mat-divider {
-    border-top-color: #333 !important;
+  border-top-color: #333 !important;
 }
 
 .white-divider {
-    border-top-color: #fff !important;
+  border-top-color: #fff !important;
 }
 
 mat-chip-set {
-    justify-content: center !important;
+  justify-content: center !important;
 }
 
-.fade-in-text { animation: fadeIn 3s; }
+.fade-in-text {
+  animation: fadeIn 3s;
+}
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .internship-title {
-    margin-top:0;
+  margin-top:0;
 }
 
 .bouncing-text{
-    animation-name: bounce-7;
-    display: inline-table;
-    animation-duration: 1.5s;
-    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+  animation-name: bounce-7;
+  display: inline-table;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
 }
 
 @keyframes bounce-7 {
-    0%   { transform: scale(1,1)      translateY(0); }
-    10%  { transform: scale(1.1,.9)   translateY(0); }
-    30%  { transform: scale(.9,1.1)   translateY(-30px); }
-    50%  { transform: scale(1.05,.95) translateY(0); }
-    57%  { transform: scale(1,1)      translateY(-7px); }
-    64%  { transform: scale(1,1)      translateY(0); }
-    100% { transform: scale(1,1)      translateY(0); }
+  0%   { transform: scale(1,1)      translateY(0); }
+  10%  { transform: scale(1.1,.9)   translateY(0); }
+  30%  { transform: scale(.9,1.1)   translateY(-30px); }
+  50%  { transform: scale(1.05,.95) translateY(0); }
+  57%  { transform: scale(1,1)      translateY(-7px); }
+  64%  { transform: scale(1,1)      translateY(0); }
+  100% { transform: scale(1,1)      translateY(0); }
 }

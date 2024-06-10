@@ -1,34 +1,34 @@
 :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    color: inherit;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: inherit;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .homebuttondiv {
-    display: flex;
-    align-items: center;
-    mat-icon {
-        margin-left: 0.25rem;
-    }
+  display: flex;
+  align-items: center;
+  mat-icon {
+    margin-left: 0.25rem;
+  }
 }
 
 svg {
-    max-height: 30rem;
+  max-height: 30rem;
 }
 
 .linkedin-logo {
-    height: 30px;
-    width: 30px;
-    margin: 0 !important;
-    padding-top: 0.4rem;
+  height: 30px;
+  width: 30px;
+  margin: 0 !important;
+  padding-top: 0.4rem;
 }
 
 .github-link {
-    height: 0.5rem;
-    padding-bottom: 1.6rem;
+  height: 0.5rem;
+  padding-bottom: 1.6rem;
 }
 
 h1,
@@ -37,128 +37,128 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 8px 0;
+  margin: 8px 0;
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 .spacer {
-    flex: 1;
+  flex: 1;
 }
 
 .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #552583;
-    color: white;
-    font-weight: 600;
-    box-shadow: 2px 2px 4px #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #552583;
+  color: white;
+  font-weight: 600;
+  box-shadow: 2px 2px 4px #333;
 }
 
 .toolbar img {
-    margin: 0 8px;
+  margin: 0 8px;
 }
 
 footer {
-    padding-top: 2rem;
-    text-align: center;
-    p {
-        padding-top: 1rem;
-    }
-
-    button {
-        box-shadow: inset 0px 1px 0px 0px #dcecfb;
-        background: linear-gradient(to bottom, #c58ef9 5%, #552583 100%);
-        background-color: #552583;
-        border-radius: 6px;
-        border: 1px solid #552583;
-        display: inline-block;
-        cursor: pointer;
-        color: #ffffff;
-        font-family: Arial;
-        font-size: 15px;
-        font-weight: bold;
-        padding: 6px 24px;
-        text-decoration: none;
-        text-shadow: 0px 1px 0px #528ecc;
-        margin-left: 1rem;
-        box-shadow: 1px 1px 2px #333;
-    }
-    button:hover {
-        background: linear-gradient(to bottom, #552583 5%, #c58ef9 100%);
-        background-color: #552583;
-    }
-    button:active {
-        position:relative;
-        top:1px;
-    }
+  padding-top: 2rem;
+  text-align: center;
+  p {
+    padding-top: 1rem;
+  }
+  
+  button {
+    box-shadow: inset 0px 1px 0px 0px #dcecfb;
+    background: linear-gradient(to bottom, #c58ef9 5%, #552583 100%);
+    background-color: #552583;
+    border-radius: 6px;
+    border: 1px solid #552583;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #528ecc;
+    margin-left: 1rem;
+    box-shadow: 1px 1px 2px #333;
+  }
+  button:hover {
+    background: linear-gradient(to bottom, #552583 5%, #c58ef9 100%);
+    background-color: #552583;
+  }
+  button:active {
+    position:relative;
+    top:1px;
+  }
 }
 
 .toolbar-name {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 @media (max-width: 769px) {
-    .toolbar-name {
-        text-decoration: none;
-        color: white;
-        width: 4.5rem;
-    }
+  .toolbar-name {
+    text-decoration: none;
+    color: white;
+    width: 4.5rem;
+  }
 }
 
 
 .skills-div,
 .experience-div {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .menu-btn {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 mat-menu {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 app-app-dark-mode-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .my-name {
-    transition: filter 0.15s ease-in-out;
+  transition: filter 0.15s ease-in-out;
 }
 
 .my-name:hover {
-    filter: brightness(85%);
+  filter: brightness(85%);
 }
 
 .projects-link {
-    transition: filter 0.15s ease-in-out;
+  transition: filter 0.15s ease-in-out;
 }
 
 .projects-link:hover {
-    filter: brightness(85%);
+  filter: brightness(85%);
 }
 
 .exp-and-skills {
-    transition: filter 0.15s ease-in-out;
+  transition: filter 0.15s ease-in-out;
 }
 
 .exp-and-skills:hover {
-    filter: brightness(85%);
+  filter: brightness(85%);
 }
