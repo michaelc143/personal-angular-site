@@ -30,11 +30,11 @@ export class ExperiencePageComponent {
   languagesTitle = "Programming Languages"
   languagesList = ["Java", "JavaScript", "Python", "TypeScript", "C", "HTML & CSS"]
   frameworksTitle = "Frameworks"
-  frameworksList = ["Angular", "React", "SpringBoot", "Three.JS"]
+  frameworksList = ["Angular", "React", "SpringBoot", "Flask"]
   otherToolsTitle = "Other Tools"
   otherToolsList = ["Git", "Docker", "Bash", "CI/CD Deployments", "Google Cloud Platform"]
-  experienceYearsLangs = [4,2,3,1,2,5]
-  experienceYearsFrames = [1,2,1,1]
-  experienceYearsTools = [4,1,2,1,1]
+  experienceYearsLangs = [3,1.5,2.5,1,1,4]
+  experienceYearsFrames = [1,1.5,1,1]
+  experienceYearsTools = [3,1,2,1,1]
   constructor(private darkModeService: DarkModeService) {}
 }
