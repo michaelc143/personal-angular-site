@@ -18,7 +18,8 @@ export class ExperiencePageComponent {
   }
 
   constructor(private darkModeService: DarkModeService) {}
-
+  eskerTitle: String = "Associate Development Consultant - Esker Inc. (2024 - Present)";
+  eskerTopics: String = "Order Management";
   internship = "Software Engineer Intern - Entegral (May 2023 - August 2023)"
   internshipTopics = ["Engineered and deployed captivating user interface features using Angular TypeScript, while seamlessly integrating cutting-edge API endpoints and functionalities within Java Spring Boot.",
   "Contributed to the development of an internal machine learning tool used to clean body shop data. This includes creating a Gitlab ci/cd pipeline, establishing connection to, storing data with, and deploying workloads into Google Cloud Platform, as well as adding documentation, linting and metric collection to the tool.",
