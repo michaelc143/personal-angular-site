@@ -1,12 +1,30 @@
 .projects-page {
   text-align: center;
   padding-top: 3.5rem;
+  padding: 2rem;
   a {
     text-decoration: none;
     color: inherit;
   }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
   h3 {
-    padding-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #7f8c8d;
+    padding-bottom: 2rem;
+  }
+}
+
+.dark-mode .projects-page {
+  h1 {
+    color: #61dafb;
+  }
+  h3 {
+    color: #b8c5d1;
   }
 }
 
@@ -20,8 +38,8 @@
 }
 
 .dark-mode-card {
-  background-color: #552582;
-  transition: background-color 0.5s ease;
+  background-color: #2d3748;
+  transition: background-color 0.3s ease;
 }
 
 mat-card {
@@ -32,10 +50,13 @@ mat-card {
     max-width: 90%;
   }
   background-color: inherit;
-  border-radius: 2rem;
+  border-radius: 8px;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   .mat-mdc-card-header {
     justify-content: center;
     padding-bottom: .5rem;
@@ -74,18 +95,10 @@ mat-card {
 }
 
 .bouncing-text{
-  animation-name: bounce-7;
-  display: inline-table;
-  animation-duration: 1.5s;
-  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+  animation: fadeIn 1.5s ease-in;
 }
 
-@keyframes bounce-7 {
-  0%   { transform: scale(1,1)      translateY(0); }
-  10%  { transform: scale(1.1,.9)   translateY(0); }
-  30%  { transform: scale(.9,1.1)   translateY(-30px); }
-  50%  { transform: scale(1.05,.95) translateY(0); }
-  57%  { transform: scale(1,1)      translateY(-7px); }
-  64%  { transform: scale(1,1)      translateY(0); }
-  100% { transform: scale(1,1)      translateY(0); }
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }

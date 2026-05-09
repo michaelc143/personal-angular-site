@@ -18,33 +18,27 @@ export class ExperiencePageComponent {
   }
 
   constructor(private darkModeService: DarkModeService) {}
-  eskerTitle: String = "Associate Development Consultant - Esker Inc. (2024 - Present)";
-  eskerTopics: String = "Order Management";
-  internship = "Software Engineer Intern - Entegral (May 2023 - August 2023)"
-  internshipTopics = ["Engineered and deployed captivating user interface features using Angular TypeScript, while seamlessly integrating cutting-edge API endpoints and functionalities within Java Spring Boot.",
-  "Contributed to the development of an internal machine learning tool used to clean body shop data. This includes creating a Gitlab ci/cd pipeline, establishing connection to, storing data with, and deploying workloads into Google Cloud Platform, as well as adding documentation, linting and metric collection to the tool.",
-  "Enhanced my professional development by actively participating in weekly hour-long technology seminars covering a diverse range of topics such as microservice architecture, machine learning, and cloud deployment.",
-  "Collaborated with business representatives in bi-weekly meetings to showcase ongoing progress towards quarterly objectives and deliver captivating demonstrations of new features to stakeholders."
+  eskerTitle: String = "Development Consultant - Esker (Oct. 2025 - Present)";
+  eskerTopics = ["Helped lead internal AI adoption initiative, integrating AI-powered development tooling across software development and consulting workflows.",
+  "Engineered custom LLM agents and skills to accelerate software delivery and automate consulting processes.",
+  "Led Order Management and Custom Inquiries Management implementations for enterprise SAP customers, owning end-to-end development and client delivery.",
+  "Led the world's first auto-update Source-to-Pay (S2P) project, delivering a groundbreaking automated upgrade solution for Esker's S2P platform."
   ]
-  webdevUW = "WebDev UW (August 2020 - May 2024)"
-  webdevUWTopics = ["UW-Madison student organization dedicated to advancing web development skills",
-  "WebHacks 2021: Created a bingo game using React to teach computer science to users"
+  associateTitle: String = "Associate Development Consultant - Esker (Aug. 2024 - Oct. 2025)";
+  associateTopics = ["Architected and implemented a custom Esker solution from scratch to process SAP nomination orders, streamlining order handling and improving data accuracy across client workflows.",
+  "Delivered software development and consulting services across Customer Service, Accounts Payable, Claims and Deductions, and custom B2B document processing solutions."
   ]
-  degree = "Computer Science Student at the University of Wisconsin - Madison (August 2020 - May 2024)"
-  degreeTopic = "Earned a Bachelor's of Science degree in Computer Science, delving into the realms of knowledge to advance expertise in cutting-edge technologies and problem-solving methodologies."
-  degreeCourses = "Computer Engineering & Memory Management, Introduction To Algorithms, Linear Algebra, Discrete Math, Artificial Intelligence, Computer Graphics, Java Programming (I - III), Operating Systems, Cryptography, Big Data Systems, UI/UX Development, VR, Software Engineering."
-  degreeCourseTitle = "Major Related Course List"
-  teachingAssistant = "AP JAVA Teaching Assistant (August 2019 - January 2020)"
-  teachingAssistantTopics = ["Played an instrumental role in instructing and mentoring high school students in AP Java, fostering their understanding and mastery of advanced Java concepts.",
-  "Provided invaluable support in guiding and empowering fellow high school students in project development and debugging, facilitating their growth and proficiency in software engineering practices."  
+  internship = "Full Stack Software Engineer Intern - Entegral Holdings (June 2023 - Aug. 2023)"
+  internshipTopics = ["Built and deployed full-stack features using Angular, TypeScript, and Java Spring Boot, including new UI components and RESTful API endpoints.",
+  "Migrated an internal data integrity tool to Google Cloud Platform, owning CI/CD pipeline setup via GitLab, GCP service integration, workload deployment, and observability improvements including linting and metric collection."
   ]
   languagesTitle = "Programming Languages"
-  languagesList = ["Java", "JavaScript", "Python", "TypeScript", "C", "HTML & CSS"]
+  languagesList = ["Java", "Python", "C", "MySQL", "JavaScript", "TypeScript", "HTML & CSS"]
   frameworksTitle = "Frameworks"
-  frameworksList = ["Angular", "React", "SpringBoot", "Flask"]
+  frameworksList = ["React", "Angular", "React Native", "Flask", "SpringBoot"]
   otherToolsTitle = "Other Tools"
-  otherToolsList = ["Git", "Docker", "Bash", "CI/CD Deployments", "Google Cloud Platform"]
-  experienceYearsLangs = [3,1.5,2.5,1,1,4]
-  experienceYearsFrames = [1,1.5,1,1]
-  experienceYearsTools = [3,1,2,1,1]
+  otherToolsList = ["Git", "Docker", "Google Cloud Platform", "GitLab CI/CD"]
+  experienceYearsLangs = [4,3,2,3,4,3,6]
+  experienceYearsFrames = [2,2,1,1,2]
+  experienceYearsTools = [5,2,2,2]
 }

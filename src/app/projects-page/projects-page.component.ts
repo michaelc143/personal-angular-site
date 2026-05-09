@@ -23,7 +23,6 @@ export class ProjectsPageComponent {
   euchreTitle: String = "Euchre Card Engine";
   bballTitle: String = "BasketballReference Python Package";
   reactTitle: String = "Personal Resume Site in React";
-  watchTitle: String = "Watch Animation using OpenGl";
   shipTitle: String = "Space Ship Animation using OpenGl";
   triangleTitle: String = "Moveable Triangle Animation using Opengl";
   employeeTitle: String = "Employee Payroll App"

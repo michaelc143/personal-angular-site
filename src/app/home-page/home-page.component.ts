@@ -18,8 +18,8 @@ export class HomePageComponent {
     });
   }
 
-  homepageTitle: String = "Hey I'm Michael!";
-  toolbarTip: String = "Use the toolbar to navigate to other pages!";
-  para1: String = "I'm a UW - Madison Alumni with a Bachelor of Science in Computer Science, with a passion for web development using frameworks like Angular and React, API development using Spring Boot and Flask, as well as machine learning and data science with Python."
-  para2: String = "Dedicated to providing top-notch solutions, I keep myself well-informed about the latest industry trends and cutting-edge technologies. Whether it involves building projects from the ground up or improving existing ones, I'm enthusiastic about teaming up for demanding web development challenges.";
+  homepageTitle: String = "Michael Corbishley";
+  toolbarTip: String = "Full Stack Software Engineer & Consultant";
+  para1: String = "I am a passionate software engineer with expertise in full-stack development, specializing in modern web technologies and cloud solutions. With a Bachelor's degree in Computer Science from the University of Wisconsin-Madison, I focus on creating scalable, efficient applications that solve real-world problems."
+  para2: String = "My experience spans across enterprise software development, AI integration, and cloud infrastructure. I enjoy working on challenging projects that push the boundaries of technology while maintaining clean, maintainable code. Let's build something amazing together.";
 }

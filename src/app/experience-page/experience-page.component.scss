@@ -2,7 +2,35 @@
   text-align: center;
   margin-top: 1rem;
   padding-top: 3.5rem;
-  max-width: 35rem;
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+}
+
+.experience-page-div h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.experience-page-div h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1.5rem 0 1rem 0;
+  color: #81a9d1;
+}
+
+.dark-mode .experience-page-div h2 {
+  color: #ffffff !important; /* Bright white for dark mode headers */
+}
+
+.experience-page-div p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -17,8 +45,16 @@
 }
 
 mat-chip {
-  background-color: #552583 !important;
-  margin: 0.2rem;
+  background-color: #3498db !important; /* Back to blue */
+  color: white;
+  margin: 0.3rem;
+  border-radius: 16px;
+  font-weight: 500;
+}
+
+.mat-badge-content {
+  background-color: #ae27ac !important; /* Green for the year badges */
+  color: white !important;
 }
 
 mat-divider {
@@ -47,18 +83,10 @@ mat-chip-set {
 }
 
 .bouncing-text{
-  animation-name: bounce-7;
-  display: inline-table;
-  animation-duration: 1.5s;
-  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+  animation: fadeIn 1.5s ease-in;
 }
 
-@keyframes bounce-7 {
-  0%   { transform: scale(1,1)      translateY(0); }
-  10%  { transform: scale(1.1,.9)   translateY(0); }
-  30%  { transform: scale(.9,1.1)   translateY(-30px); }
-  50%  { transform: scale(1.05,.95) translateY(0); }
-  57%  { transform: scale(1,1)      translateY(-7px); }
-  64%  { transform: scale(1,1)      translateY(0); }
-  100% { transform: scale(1,1)      translateY(0); }
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }

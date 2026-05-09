@@ -22,13 +22,13 @@ svg {
 .linkedin-logo {
   height: 30px;
   width: 30px;
-  margin: 0 !important;
-  padding-top: 0.4rem;
+  margin: 0 8px;
 }
 
 .github-link {
-  height: 0.5rem;
-  padding-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
 }
 
 h1,
@@ -56,61 +56,77 @@ p {
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #552583;
+  background-color: #2c3e50;
   color: white;
-  font-weight: 600;
-  box-shadow: 2px 2px 4px #333;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .toolbar img {
-  margin: 0 8px;
+  margin: 0 8px 0 0;
 }
 
 footer {
+  position: relative;
   padding-top: 2rem;
   text-align: center;
-  p {
-    padding-top: 1rem;
-  }
-  
-  button {
-    box-shadow: inset 0px 1px 0px 0px #dcecfb;
-    background: linear-gradient(to bottom, #c58ef9 5%, #552583 100%);
-    background-color: #552583;
-    border-radius: 6px;
-    border: 1px solid #552583;
-    display: inline-block;
+
+  .homeBtn {
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    color: white;
     cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
+    font-family: 'Roboto', sans-serif;
     font-size: 15px;
-    font-weight: bold;
-    padding: 6px 24px;
-    text-decoration: none;
-    text-shadow: 0px 1px 0px #528ecc;
-    margin-left: 1rem;
-    box-shadow: 1px 1px 2px #333;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
-  button:hover {
-    background: linear-gradient(to bottom, #552583 5%, #c58ef9 100%);
-    background-color: #552583;
+
+  .homeBtn:hover {
+    background-color: #2980b9;
   }
-  button:active {
-    position:relative;
-    top:1px;
+
+  .homeBtn:active {
+    transform: translateY(1px);
   }
 }
 
 .toolbar-name {
   text-decoration: none;
   color: white;
+  flex-shrink: 0;
 }
 
 @media (max-width: 769px) {
+  .toolbar {
+    padding: 0 8px;
+  }
+  .toolbar img:first-child {
+    width: 32px;
+    height: 32px;
+  }
   .toolbar-name {
     text-decoration: none;
     color: white;
-    width: 4.5rem;
+    font-size: 14px;
+  }
+  .linkedin-logo,
+  .github-link img {
+    width: 24px;
+    height: 24px;
+  }
+  .menu-btn {
+    font-size: 14px;
+    padding: 0 8px;
   }
 }
 
