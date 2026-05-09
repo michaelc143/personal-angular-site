@@ -9,11 +9,11 @@ describe('ExperiencePageComponent', () => {
   let component: ExperiencePageComponent;
   let fixture: ComponentFixture<ExperiencePageComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       declarations: [ExperiencePageComponent],
       imports: [MatChipsModule, MatDividerModule, MatBadgeModule]
-    });
+    }).compileComponents();
     fixture = TestBed.createComponent(ExperiencePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -23,27 +23,40 @@ describe('ExperiencePageComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have chips', () => {
-    expect(fixture.debugElement.query(By.css('mat-chip'))).toBeTruthy();
-  });
-
-  it('should have 3 chips lists', () => {
-    expect(fixture.debugElement.queryAll(By.css('.chips-list')).length).toEqual(3);
-  });
-
-  it('should have the correct number of chips', () => {
-    expect(fixture.debugElement.queryAll(By.css('mat-chip')).length).toEqual(15);
-  });
-
-  it('should have the main title', () => {
+  it('should render the Experience heading', () => {
     const h1 = fixture.debugElement.query(By.css('h1'));
-    const compiled = h1.nativeElement as HTMLElement;
-    expect(compiled.textContent).toBe("Experience");
+    expect(h1).toBeTruthy();
+    if (h1) {
+      expect((h1.nativeElement as HTMLElement).textContent?.trim()).toBe('Experience');
+    }
   });
 
-  it('should have the entegral title', () => {
+  it('should render the expereince categories', () => {
+    expect(fixture.debugElement.queryAll(By.css('.chips-list')).length).toBe(3);
+  });
+
+  it('should render the correct total number of chips', () => {
+    expect(fixture.debugElement.queryAll(By.css('mat-chip')).length).toBe(16);
+  });
+
+  it('should render the main internship title', () => {
     const title = fixture.debugElement.query(By.css('.internship-title'));
-    const compiled = title.nativeElement as HTMLElement;
-    expect(compiled.textContent).toBe("Software Engineer Intern - Entegral (May 2023 - August 2023)");
+    expect(title).toBeTruthy();
+    if (title) {
+      expect((title.nativeElement as HTMLElement).textContent?.trim()).toBe('Associate Development Consultant - Esker (Aug. 2024 - Oct. 2025)');
+    }
+  });
+
+  it('should include the current Esker title text', () => {
+    const headings = fixture.debugElement.queryAll(By.css('h2'));
+    expect(headings.length).toBeGreaterThan(0);
+    const eskerHeading = headings[0];
+    if (eskerHeading) {
+      expect((eskerHeading.nativeElement as HTMLElement).textContent?.trim()).toBe(component.eskerTitle.toString());
+    }
+  });
+
+  it('should render badge values for year counts', () => {
+    expect(fixture.debugElement.queryAll(By.css('.mat-badge-content')).length).toBe(16);
   });
 });

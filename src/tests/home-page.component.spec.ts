@@ -7,11 +7,12 @@ describe('HomePageComponent', () => {
   let component: HomePageComponent;
   let fixture: ComponentFixture<HomePageComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       declarations: [HomePageComponent],
       imports: [MatCardModule]
-    });
+    }).compileComponents();
+
     fixture = TestBed.createComponent(HomePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -21,24 +22,32 @@ describe('HomePageComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should generate h1', () => {
-    const h1 = fixture.debugElement.query(By.css('h1'));
-    const compiled = h1.nativeElement as HTMLElement;
-    expect(compiled.textContent).toBeTruthy();
+  it('should render the homepage title', () => {
+    const h1 = fixture.debugElement.query(By.css('h1.desktop-title'));
+    expect(h1).toBeTruthy();
+    if (h1) {
+      expect((h1.nativeElement as HTMLElement).textContent?.trim()).toBe(component.homepageTitle.toString());
+    }
   });
 
-  it('should generate the angular material card', () => {
-    expect(fixture.debugElement.query(By.css('mat-card'))).toBeTruthy();
-  });
-
-  it('should generate the angular material card title h2', () => {
+  it('should render the toolbar tip in an h2', () => {
     const h2 = fixture.debugElement.query(By.css('mat-card-title h2'));
-    const compiled = h2.nativeElement as HTMLElement;
-    expect(compiled.textContent).toBe("Use the toolbar to navigate to other pages!");
+    expect(h2).toBeTruthy();
+    if (h2) {
+      expect((h2.nativeElement as HTMLElement).textContent?.trim()).toBe(component.toolbarTip.toString());
+    }
   });
 
-  it('should generate the angular material card image', () => {
-    expect(fixture.debugElement.query(By.css('mat-card img'))).toBeTruthy();
+  it('should render the material card and profile image', () => {
+    expect(fixture.debugElement.query(By.css('mat-card'))).toBeTruthy();
+    const image = fixture.debugElement.query(By.css('img.profile-pic'));
+    expect(image).toBeTruthy();
+    expect((image.nativeElement as HTMLImageElement).alt).toContain('Photo of me');
   });
 
+  it('should show the intro paragraph text', () => {
+    const paragraph = fixture.debugElement.query(By.css('.nameAndPhoto p'));
+    expect(paragraph).toBeTruthy();
+    expect((paragraph.nativeElement as HTMLElement).textContent).toContain(component.para1.toString().slice(0, 20));
+  });
 });

@@ -9,12 +9,15 @@ import { By } from '@angular/platform-browser';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatRippleModule } from '@angular/material/core';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
+  let component: AppComponent;
 
   beforeEach(async () => {
-    TestBed.configureTestingModule(
+    await TestBed.configureTestingModule(
       {
         imports: [
           RouterTestingModule,
@@ -22,25 +25,28 @@ describe('AppComponent', () => {
           MatIconModule,
           MatSlideToggleModule,
           MatButtonModule,
-          MatMenuModule
+          MatMenuModule,
+          MatTooltipModule,
+          MatRippleModule
         ], 
         declarations: [
           AppComponent,
           AppDarkModeToggleComponent
         ]
       }
-    )
+    ).compileComponents();
+
     fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
   });
 
   it('should create the app', () => {
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
   it(`should have as title 'personal-angular-site'`, () => {
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('personal-angular-site');
+    expect(component.title).toEqual('personal-angular-site');
   });
 
   it('should generate the toolbar', () => {
@@ -49,17 +55,16 @@ describe('AppComponent', () => {
     expect(fixture.debugElement.query(By.css('.linkedin-logo'))).toBeTruthy();
     expect(fixture.debugElement.query(By.css('.menu-btn'))).toBeTruthy();
     expect(fixture.debugElement.query(By.css('.github-link'))).toBeTruthy();
+    expect(fixture.debugElement.query(By.css('.toolbar-name'))).toBeTruthy();
   });
 
-  it('should generate the current page', () => {
+  it('should render a router outlet', () => {
     expect(fixture.debugElement.query(By.css('router-outlet'))).toBeTruthy();
   });
 
-  it('should generate the dark mode button', () => {
-    expect(fixture.debugElement.query(By.css('app-app-dark-mode-toggle'))).toBeTruthy();
-  });
-
-  it('should generate the home button', () => {
-    expect(fixture.debugElement.query(By.css('.homeBtn'))).toBeTruthy();
+  it('should render the home button', () => {
+    const button = fixture.debugElement.query(By.css('.homeBtn'));
+    expect(button).toBeTruthy();
+    expect(button.attributes['routerLink']).toBe('');
   });
 });

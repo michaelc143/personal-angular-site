@@ -4,16 +4,18 @@ import { ProjectsPageComponent } from 'src/app/projects-page/projects-page.compo
 import { By } from '@angular/platform-browser';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 describe('ProjectsPageComponent', () => {
   let component: ProjectsPageComponent;
   let fixture: ComponentFixture<ProjectsPageComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       declarations: [ProjectsPageComponent],
-      imports: [MatCardModule, MatExpansionModule, BrowserAnimationsModule]
-    });
+      imports: [MatCardModule, MatExpansionModule, BrowserAnimationsModule, MatTooltipModule]
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ProjectsPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -23,73 +25,45 @@ describe('ProjectsPageComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have the title', () => {
-    const fixture = TestBed.createComponent(ProjectsPageComponent);
-    expect(fixture.nativeElement.querySelector('.projects-title')).toBeTruthy;
+  it('should render the page title', () => {
+    expect(fixture.nativeElement.querySelector('.projects-title')).toBeTruthy();
   });
 
-  it('should have the correct number of proj cards', () => {
-    const fixture = TestBed.createComponent(ProjectsPageComponent);
-    expect(fixture.debugElement.queryAll(By.css('mat-card')).length).toEqual(8);
+  it('should render seven project cards', () => {
+    expect(fixture.debugElement.queryAll(By.css('mat-card')).length).toEqual(7);
   });
 
-  it('should have borb chat', () => {
-    const fixture = TestBed.createComponent(ProjectsPageComponent);
-    component = fixture.componentInstance;
+  it('should render the BorbChat project card', () => {
     expect(fixture.nativeElement.querySelector('.borb-links')).toBeTruthy();
   });
 
-  it('should have app template project', () => {
-    const fixture = TestBed.createComponent(ProjectsPageComponent);
-    component = fixture.componentInstance;
-    expect(component.appTemplateTitle).toBeTruthy();
-    expect(component.appTemplateTitle).toEqual("WebApp Template");
+  it('should render the WebApp Template card and title', () => {
+    expect(component.appTemplateTitle).toBe('WebApp Template');
     expect(fixture.nativeElement.querySelector('.template-links')).toBeTruthy();
   });
 
-  it('should have euchre project', () => {
-    const fixture = TestBed.createComponent(ProjectsPageComponent);
-    component = fixture.componentInstance;
-    expect(component.euchreTitle).toBeTruthy();
-    expect(component.euchreTitle).toEqual("Euchre Card Engine");
+  it('should render the Euchre project card and title', () => {
+    expect(component.euchreTitle).toBe('Euchre Card Engine');
     expect(fixture.nativeElement.querySelector('.euchre-links')).toBeTruthy();
   });
 
-  it('should have bball project', () => {
-    const fixture = TestBed.createComponent(ProjectsPageComponent);
-    component = fixture.componentInstance;
-    expect(component.bballTitle).toBeTruthy();
-    expect(component.bballTitle).toEqual("BasketballReference Python Package");
+  it('should render the BasketballReference project card and title', () => {
+    expect(component.bballTitle).toBe('BasketballReference Python Package');
     expect(fixture.nativeElement.querySelector('.bball-links')).toBeTruthy();
   });
 
-  it('should have react project', () => {
-    const fixture = TestBed.createComponent(ProjectsPageComponent);
-    component = fixture.componentInstance;
-    expect(component.reactTitle).toBeTruthy();
-    expect(component.reactTitle).toEqual("Personal Resume Site in React");
+  it('should render the React resume project card and title', () => {
+    expect(component.reactTitle).toBe('Personal Resume Site in React');
     expect(fixture.nativeElement.querySelector('.react-links')).toBeTruthy();
   });
 
-  it('should have watch animation project', () => {
-    const fixture = TestBed.createComponent(ProjectsPageComponent);
-    component = fixture.componentInstance;
-    expect(component.watchTitle).toBeTruthy();
-    expect(component.watchTitle).toEqual("Watch Animation using OpenGl");
-    expect(fixture.nativeElement.querySelector('.watch-links')).toBeTruthy();
-  });
-
-  it('should have the employee api project', () => {
-    const fixture = TestBed.createComponent(ProjectsPageComponent);
-    component = fixture.componentInstance;
+  it('should render the employee payroll project card', () => {
     expect(fixture.nativeElement.querySelector('.api-links')).toBeTruthy();
+    expect(component.employeeTitle).toBe('Employee Payroll App');
   });
 
-  it('should have the machine learning road project', () => {
-    const fixture = TestBed.createComponent(ProjectsPageComponent);
-    component = fixture.componentInstance;
-    expect(component.machineLearningTitle).toEqual("Clean/Dirty Roads Machine Learning Model");
+  it('should render the machine learning project card', () => {
+    expect(component.machineLearningTitle).toBe('Clean/Dirty Roads Machine Learning Model');
     expect(fixture.nativeElement.querySelector('.machine-learning-links')).toBeTruthy();
   });
-
 });
