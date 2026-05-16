@@ -1,29 +1,36 @@
 <mat-card [ngClass]="{'dark-mode-card': isDarkMode}">
   <mat-card-header>
     <mat-card-title>
-      <h1 class="desktop-title">
-        {{ homepageTitle }}
-      </h1>
-      <h1 class="mobile-title">
-        {{ homepageTitle }}
-      </h1>
-      <h2 class="fade-in-text">{{ toolbarTip }}</h2>
+      <h1>{{ homepageTitle }}</h1>
+      <h2 class="subtitle fade-in">{{ toolbarTip }}</h2>
     </mat-card-title>
   </mat-card-header>
-  <mat-card-content class="fade-in-text">
-    <img class="profile-pic-mobile" alt="Photo of me" src="https://avatars.githubusercontent.com/u/79810775?v=4">
-    <div class="nameAndPhoto">
-      <img class="profile-pic" alt="Photo of me" src="https://avatars.githubusercontent.com/u/79810775?v=4">
-      <p>
-          {{ para1 }}
-          <br/>
-          <img class="angular-logo" alt="Angular" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" />
-          <img class="react-logo" alt="React" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-          <img class="python-logo" alt="Python" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg" />
-          <img class="java-logo" alt="Java" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/>
-          <br/>
-          {{ para2 }}
-      </p>
+
+  <mat-card-content>
+    <img class="profile-pic profile-pic--mobile" alt="Photo of Michael Corbishley" src="https://avatars.githubusercontent.com/u/79810775?v=4">
+
+    <div class="bio-layout fade-in">
+      <img class="profile-pic profile-pic--desktop" alt="Photo of Michael Corbishley" src="https://avatars.githubusercontent.com/u/79810775?v=4">
+      <div class="bio-text">
+        <p>{{ para1 }}</p>
+        <div class="tech-stack">
+          <span class="tech-label">Stack:</span>
+          <img alt="Angular" title="Angular" width="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" />
+          <img alt="React" title="React" width="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+          <img alt="Python" title="Python" width="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-plain.svg" />
+          <img alt="Java" title="Java" width="28" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+        </div>
+        <p>{{ para2 }}</p>
+        <div class="cta-links">
+          <a routerLink="projects" mat-stroked-button>View My Work</a>
+          <a href="https://github.com/michaelc143" target="_blank" rel="noopener" aria-label="GitHub">
+            <img width="28" alt="GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+          </a>
+          <a href="https://www.linkedin.com/in/michael-corbishley/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img width="28" alt="LinkedIn" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" />
+          </a>
+        </div>
       </div>
-    </mat-card-content>
+    </div>
+  </mat-card-content>
 </mat-card>

@@ -25,45 +25,72 @@ describe('ProjectsPageComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  // --- Page structure ---
+
   it('should render the page title', () => {
     expect(fixture.nativeElement.querySelector('.projects-title')).toBeTruthy();
   });
 
-  it('should render seven project cards', () => {
-    expect(fixture.debugElement.queryAll(By.css('mat-card')).length).toEqual(7);
+  it('should render five project cards', () => {
+    expect(fixture.debugElement.queryAll(By.css('mat-card')).length).toEqual(5);
   });
 
-  it('should render the BorbChat project card', () => {
-    expect(fixture.nativeElement.querySelector('.borb-links')).toBeTruthy();
-  });
+  // --- Project titles (data integrity) ---
 
-  it('should render the WebApp Template card and title', () => {
+  it('should have correct WebApp Template title', () => {
     expect(component.appTemplateTitle).toBe('WebApp Template');
-    expect(fixture.nativeElement.querySelector('.template-links')).toBeTruthy();
   });
 
-  it('should render the Euchre project card and title', () => {
+  it('should have correct Euchre title', () => {
     expect(component.euchreTitle).toBe('Euchre Card Engine');
-    expect(fixture.nativeElement.querySelector('.euchre-links')).toBeTruthy();
   });
 
-  it('should render the BasketballReference project card and title', () => {
+  it('should have correct BasketballReference title', () => {
     expect(component.bballTitle).toBe('BasketballReference Python Package');
-    expect(fixture.nativeElement.querySelector('.bball-links')).toBeTruthy();
   });
 
-  it('should render the React resume project card and title', () => {
-    expect(component.reactTitle).toBe('Personal Resume Site in React');
-    expect(fixture.nativeElement.querySelector('.react-links')).toBeTruthy();
-  });
-
-  it('should render the employee payroll project card', () => {
-    expect(fixture.nativeElement.querySelector('.api-links')).toBeTruthy();
+  it('should have correct Employee Payroll title', () => {
     expect(component.employeeTitle).toBe('Employee Payroll App');
   });
 
-  it('should render the machine learning project card', () => {
+  it('should have correct Machine Learning title', () => {
     expect(component.machineLearningTitle).toBe('Clean/Dirty Roads Machine Learning Model');
+  });
+
+  // --- Project link sections (DOM presence) ---
+
+  it('should render the WebApp Template link section', () => {
+    expect(fixture.nativeElement.querySelector('.template-links')).toBeTruthy();
+  });
+
+  it('should render the Euchre link section', () => {
+    expect(fixture.nativeElement.querySelector('.euchre-links')).toBeTruthy();
+  });
+
+  it('should render the BasketballReference link section', () => {
+    expect(fixture.nativeElement.querySelector('.bball-links')).toBeTruthy();
+  });
+
+  it('should render the Employee Payroll link section', () => {
+    expect(fixture.nativeElement.querySelector('.api-links')).toBeTruthy();
+  });
+
+  it('should render the Machine Learning link section', () => {
     expect(fixture.nativeElement.querySelector('.machine-learning-links')).toBeTruthy();
+  });
+
+  // --- Links open in new tab ---
+
+  it('should have all project link section anchors open in a new tab', () => {
+    const linkSections = ['.template-links', '.euchre-links', '.bball-links', '.api-links', '.machine-learning-links'];
+    linkSections.forEach(selector => {
+      const section = fixture.nativeElement.querySelector(selector);
+      if (section) {
+        const anchors: NodeListOf<HTMLAnchorElement> = section.querySelectorAll('a[href^="https"]');
+        anchors.forEach((link) => {
+          expect(link.target).toBe('_blank');
+        });
+      }
+    });
   });
 });

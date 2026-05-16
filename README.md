@@ -1,56 +1,58 @@
-# PersonalAngularSite
+# Michael Corbishley — Personal Portfolio
 
 ![Build and Test](https://github.com/michaelc143/personal-angular-site/actions/workflows/docker-image.yml/badge.svg)
 ![Deploy](https://github.com/michaelc143/personal-angular-site/actions/workflows/pages/pages-build-deployment/badge.svg)
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 
+A personal portfolio site built with Angular, showcasing my experience, projects, and skills as a full stack software engineer. Deployed via GitHub Pages with automated CI/CD.
 
-This project is a side hobby being worked on over the course of Summer 2023 while working full-time. If you discover any bugs or have any questions at all, feel free to email me at mcorbishley@wisc.edu
+**Live site:** [michaelc143.github.io/personal-angular-site](https://michaelc143.github.io/personal-angular-site)
 
-## Installation
+---
 
-1. Clone the repository: 
-```bash
-git clone https://github.com/michaelc143/personal-angular-site
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | Angular 16, Angular Material, TypeScript |
+| Styling | SCSS, dark mode support |
+| CI/CD | GitHub Actions, Docker |
+| Hosting | GitHub Pages |
+
+---
+
+## Getting Started
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for setup instructions, local development, and how to run tests.
+
+---
+
+## Project Structure
+
 ```
-2. Navigate to the project directory
-```bash
-cd personal-angular-site
-```
-3. Install the necessary dependencies
-```bash
-npm install
-```
-
-## Local Development server
-
-To run the web app locally once you have cloned it, simply run the following command:
-```bash
-ng serve
-```
-
-This will deploy a local development server that you can access by navigating to `http://localhost:4200/` in your browser to view.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-To execute the unit tests for this web app, run the following command:
-```bash
-ng test
-```
-
-If you want to run the unit tests without opening a chrome window, run the following command
-```bash
-ng test --watch=false --browsers=ChromeHeadless
+src/
+├── app/
+│   ├── home-page/          # Landing page component
+│   ├── experience-page/    # Experience & skills component
+│   ├── projects-page/      # Projects showcase component
+│   └── logos/              # Tech stack logo assets
+└── tests/                  # Unit test specs
 ```
 
-If you want to run the unit tests for coverage, run the following command
-```bash
-ng test --watch=false --browsers=ChromeHeadless --code-coverage
-```
+---
 
-## Further help
+## Pages
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+| Page | Description |
+|---|---|
+| Home | Introduction, bio, and tech stack |
+| Experience | Work history and skills |
+| Projects | Selected personal and professional projects |
+
+---
+
+## Contact
+
+Questions or bugs? Email [corbishleymichael1@gmail.com](corbishleymichael1@gmail.com) or open an [issue](https://github.com/michaelc143/personal-angular-site/issues).

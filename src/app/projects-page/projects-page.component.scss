@@ -1,104 +1,152 @@
 .projects-page {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 5rem 2rem 3rem;
   text-align: center;
-  padding-top: 3.5rem;
-  padding: 2rem;
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
-  }
-  h3 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #7f8c8d;
-    padding-bottom: 2rem;
+  animation: fadeUp 0.6s ease-out both;
+
+  @media (max-width: 600px) {
+    padding: 4.5rem 1rem 2rem;
   }
 }
 
-.dark-mode .projects-page {
-  h1 {
+.projects-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+// Grid layout
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Cards
+.project-card {
+  display: flex !important;
+  flex-direction: column;
+  background-color: inherit;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 8px 24px rgba(52, 152, 219, 0.18);
+    transform: translateY(-3px);
+  }
+
+  img[mat-card-image] {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin: 0;
+  }
+
+  .mat-mdc-card-header {
+    padding: 1rem 1rem 0.25rem;
+  }
+
+  mat-card-content {
+    padding: 0.5rem 1rem;
+    flex: 1;
+  }
+
+  mat-card-actions {
+    padding: 0.5rem 1rem 1rem;
+  }
+}
+
+.project-description {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+// Tags
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  background: rgba(52, 152, 219, 0.12);
+  color: #3498db;
+  letter-spacing: 0.03em;
+}
+
+// Link action areas (named for test selector compatibility)
+.template-links,
+.euchre-links,
+.bball-links,
+.api-links,
+.machine-learning-links,
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  a[mat-stroked-button] {
+    font-size: 0.8rem;
+    color: #3498db;
+    border-color: #3498db;
+
+    &:hover {
+      background-color: rgba(52, 152, 219, 0.08);
+    }
+  }
+}
+
+// Dark mode
+.dark-mode {
+  .projects-title {
     color: #61dafb;
   }
-  h3 {
+
+  .project-description {
     color: #b8c5d1;
   }
-}
 
-.api-links {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  a {
-    padding: 0.5rem;
+  .tag {
+    background: rgba(97, 218, 251, 0.1);
+    color: #61dafb;
   }
 }
 
 .dark-mode-card {
-  background-color: #2d3748;
+  background-color: #2d3748 !important;
   transition: background-color 0.3s ease;
-}
 
-mat-card {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  img {
-    max-width: 90%;
+  .tag {
+    background: rgba(97, 218, 251, 0.1);
+    color: #61dafb;
   }
-  background-color: inherit;
-  border-radius: 8px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  max-width: 600px;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  .mat-mdc-card-header {
-    justify-content: center;
-    padding-bottom: .5rem;
+
+  a[mat-stroked-button] {
+    color: #61dafb;
+    border-color: #61dafb;
+
+    &:hover {
+      background-color: rgba(97, 218, 251, 0.08);
+    }
   }
-  mat-panel-description {
-    display: flex;
-    justify-content: center;
-    margin-right: 0 !important;
-  }
-  mat-expansion-panel,
-  mat-panel-description {
-    background-color: inherit !important;
-    color: inherit !important;
-  }
-  mat-card-content {
-    padding: 1rem 0;
-  }
-  margin-bottom: 5rem;
 }
 
-.fade-in-text {
-  animation: fadeIn 3s;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.projects-title {
-  padding-top:1rem;
-}
-
-.projects-header {
-  margin-top: 0 !important;
-}
-
-.bouncing-text{
-  animation: fadeIn 1.5s ease-in;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0); }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

@@ -1,112 +1,173 @@
-.profile-pic {
-  border-radius: 50%;
-  width: 100%; /* Set image width to 100% of its container */
-  max-width: 15rem; /* Set a maximum width for the image */
-  height: auto; /* Let the height adjust automatically */
-  padding-right: 0.5rem;
-  transition: all 0.5s ease;
-}
-
-.profile-pic-mobile {
-  border-radius: 50%;
-  width: 100%; /* Set image width to 100% of its container */
-  max-width: 15rem; /* Set a maximum width for the image */
-  height: auto; /* Let the height adjust automatically */
-  padding-right: 0.5rem;
-  transition: all 0.5s ease;
-}
-
-@media (min-width: 474px) {
-  .mobile-title {
-    display: none;
-  }
-}
-
-@media (max-width: 473px) {
-  .desktop-title {
-    display: none;
-  }
-}
-
-@media (min-width: 769px) {
-  .profile-pic-mobile {
-    display: none;
-  }
-}
-
-/* Media query for screens with a maximum width of 768px (typical mobile devices) */
-@media (max-width: 768px) {
-  .profile-pic {
-    display:none;
-  }
-}
-
-.dark-mode-card {
-  background-color: #2d3748;
-  transition: background-color 0.3s ease;
-}
-
 mat-card {
   display: flex !important;
   background-color: inherit;
   border-radius: 8px;
-  margin-top: 5rem;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: clamp(2rem, 8vw, 5rem) auto;
   width: 80%;
   max-width: 800px;
   padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
 
-  .nameAndPhoto {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
   .mat-mdc-card-header {
     justify-content: center !important;
   }
-  mat-card-content {
-    max-width: 600px;
-    margin: auto;
+
+  mat-card-title h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    animation: fadeUp 0.6s ease-out both;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #5a6a7a;
+    margin-top: 0.25rem;
+    animation: fadeUp 0.6s ease-out 0.15s both;
   }
 }
 
-.angular-logo,
-.python-logo,
-.react-logo,
-.java-logo {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+.bio-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  text-align: left;
+  margin-top: 1rem;
+  animation: fadeUp 0.6s ease-out 0.3s both;
 }
 
-.fade-in-text { animation: fadeIn 2s ease-in; }
+.bio-text {
+  flex: 1;
 
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  p {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+  }
 }
 
-mat-card mat-card-title h1 {
-  font-size: 2.5rem;
-  font-weight: 300;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
+.profile-pic {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid transparent;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    transform: scale(1.04);
+    border-color: #61dafb;
+  }
+
+  &--mobile {
+    display: none;
+    margin: 0 auto 1rem;
+  }
 }
 
-.dark-mode-card mat-card-title h1 {
-  color: #61dafb;
+.tech-stack {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 0.75rem 0;
+
+  .tech-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #7f8c8d;
+  }
+
+  img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
 }
 
-mat-card mat-card-title h2 {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #7f8c8d;
-  margin-top: 0.5rem;
+.cta-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+
+  a[mat-stroked-button] {
+    color: #3498db;
+    border-color: #3498db;
+
+    &:hover {
+      background-color: rgba(52, 152, 219, 0.08);
+    }
+  }
 }
 
-.dark-mode-card mat-card-title h2 {
-  color: #b8c5d1;
+// Dark mode
+.dark-mode-card {
+  background-color: #2d3748;
+  transition: background-color 0.3s ease;
+
+  mat-card-title h1 {
+    color: #61dafb;
+  }
+
+  .subtitle {
+    color: #b8c5d1;
+  }
+
+  .cta-links a[mat-stroked-button] {
+    color: #61dafb;
+    border-color: #61dafb;
+
+    &:hover {
+      background-color: rgba(97, 218, 251, 0.08);
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .bio-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic--mobile {
+    display: block;
+  }
+
+  .profile-pic--desktop {
+    display: none;
+  }
+
+  .tech-stack,
+  .cta-links {
+    justify-content: center;
+  }
+}
+
+// Animation
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeUp 0.6s ease-out 0.3s both;
 }

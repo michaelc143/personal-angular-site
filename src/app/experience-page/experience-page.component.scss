@@ -1,92 +1,156 @@
 .experience-page-div {
-  text-align: center;
-  margin-top: 1rem;
-  padding-top: 3.5rem;
   max-width: 50rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2rem;
+  margin: 0 auto;
+  padding: 5rem 2rem clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+  animation: fadeUp 0.6s ease-out both;
+
+  @media (max-width: 600px) {
+    padding: 4.5rem 1rem 2rem;
+  }
 }
 
-.experience-page-div h1 {
-  font-size: 2.5rem;
+// Section headings
+.section-heading {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 300;
   margin-bottom: 2rem;
 }
 
-.experience-page-div h2 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin: 1.5rem 0 1rem 0;
+// Timeline / job cards
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.job-card {
+  border: 1px solid rgba(129, 169, 209, 0.3);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(52, 152, 219, 0.15);
+  }
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+}
+
+.job-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.job-role {
+  font-size: 1.1rem;
+  font-weight: 600;
   color: #81a9d1;
 }
 
-.dark-mode .experience-page-div h2 {
-  color: #ffffff !important; /* Bright white for dark mode headers */
+.job-company {
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0.75;
 }
 
-.experience-page-div p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-  text-align: left;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+.job-date {
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: rgba(52, 152, 219, 0.12);
+  color: #3498db;
+  padding: 0.2rem 0.65rem;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.job-topics {
+  margin: 0;
+  padding-left: 1.25rem;
+
+  li {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0.4rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Skills section
+.skill-section {
+  margin-bottom: 1.25rem;
+}
+
+.skill-group-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #81a9d1;
+  margin: 1.25rem 0 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
 }
 
 .chips-list {
   display: flex;
-  justify-content: center !important;
-  margin-bottom: 1rem;
+  justify-content: center;
   flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 mat-chip {
-  background-color: #3498db !important; /* Back to blue */
+  background-color: #3498db !important;
   color: white;
-  margin: 0.3rem;
   border-radius: 16px;
   font-weight: 500;
 }
 
-.mat-badge-content {
-  background-color: #ae27ac !important; /* Green for the year badges */
-  color: white !important;
-}
-
 mat-divider {
   border-top-color: #333 !important;
+  margin: 2rem 0;
 }
 
 .white-divider {
   border-top-color: #fff !important;
 }
 
-mat-chip-set {
-  justify-content: center !important;
+// Dark mode
+.dark-mode {
+  .job-card {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .job-role,
+  .skill-group-title {
+    color: #fff;
+  }
+
+  .job-date {
+    background: rgba(255, 255, 255, 0.1);
+    color: #b8c5d1;
+  }
 }
 
-.fade-in-text {
-  animation: fadeIn 3s;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.internship-title {
-  margin-top:0;
-}
-
-.bouncing-text{
-  animation: fadeIn 1.5s ease-in;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0); }
+// Animation
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

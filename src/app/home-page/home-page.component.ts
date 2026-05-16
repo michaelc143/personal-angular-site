@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DarkModeService } from 'angular-dark-mode';
 
 @Component({
@@ -6,9 +6,14 @@ import { DarkModeService } from 'angular-dark-mode';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent {
+export class HomePageComponent implements OnInit {
 
-  isDarkMode: boolean = false;
+  isDarkMode = false;
+
+  homepageTitle = 'Michael Corbishley';
+  toolbarTip = 'Full Stack Software Engineer & Consultant';
+  para1 = "I'm a full stack software engineer based in Wisconsin, specializing in modern web applications and cloud infrastructure. I graduated from UW–Madison with a degree in Computer Science and focus on building things that are fast, accessible, and built to last.";
+  para2 = "I've worked across enterprise software, AI integration, and distributed systems. I care about clean architecture, readable code, and shipping things that work. If you have a problem worth solving, I'd love to hear about it.";
 
   constructor(private darkModeService: DarkModeService) {}
 
@@ -17,9 +22,4 @@ export class HomePageComponent {
       this.isDarkMode = darkMode;
     });
   }
-
-  homepageTitle: String = "Michael Corbishley";
-  toolbarTip: String = "Full Stack Software Engineer & Consultant";
-  para1: String = "I am a passionate software engineer with expertise in full-stack development, specializing in modern web technologies and cloud solutions. With a Bachelor's degree in Computer Science from the University of Wisconsin-Madison, I focus on creating scalable, efficient applications that solve real-world problems."
-  para2: String = "My experience spans across enterprise software development, AI integration, and cloud infrastructure. I enjoy working on challenging projects that push the boundaries of technology while maintaining clean, maintainable code. Let's build something amazing together.";
 }
