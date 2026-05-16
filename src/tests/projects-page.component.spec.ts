@@ -38,23 +38,23 @@ describe('ProjectsPageComponent', () => {
   // --- Project titles (data integrity) ---
 
   it('should have correct WebApp Template title', () => {
-    expect(component.appTemplateTitle).toBe('WebApp Template');
+    expect(component.appTemplateTitle).toBe('Enterprise-Scale Architecture Kit');
   });
 
   it('should have correct Euchre title', () => {
-    expect(component.euchreTitle).toBe('Euchre Card Engine');
+    expect(component.euchreTitle).toBe('Real-Time Game Logic Engine');
   });
 
   it('should have correct BasketballReference title', () => {
-    expect(component.bballTitle).toBe('BasketballReference Python Package');
+    expect(component.bballTitle).toBe('Automated Data Extraction Pipeline');
   });
 
   it('should have correct Employee Payroll title', () => {
-    expect(component.employeeTitle).toBe('Employee Payroll App');
+    expect(component.employeeTitle).toBe('Full-Stack ERP Human Capital API');
   });
 
   it('should have correct Machine Learning title', () => {
-    expect(component.machineLearningTitle).toBe('Clean/Dirty Roads Machine Learning Model');
+    expect(component.machineLearningTitle).toBe('AI Road Condition Classifier');
   });
 
   // --- Project link sections (DOM presence) ---

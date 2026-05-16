@@ -32,19 +32,19 @@ export class ProjectsPageComponent implements OnInit {
   }
 
   // Keep individual title properties for existing tests
-  appTemplateTitle = 'WebApp Template';
-  euchreTitle = 'Euchre Card Engine';
-  bballTitle = 'BasketballReference Python Package';
-  employeeTitle = 'Employee Payroll App';
-  machineLearningTitle = 'Clean/Dirty Roads Machine Learning Model';
+  appTemplateTitle = 'Enterprise-Scale Architecture Kit';
+  euchreTitle = 'Real-Time Game Logic Engine';
+  bballTitle = 'Automated Data Extraction Pipeline';
+  employeeTitle = 'Full-Stack ERP Human Capital API';
+  machineLearningTitle = 'AI Road Condition Classifier';
 
   getLinkClass(title: string): string {
     const map: Record<string, string> = {
-      'WebApp Template': 'template-links',
-      'Euchre Card Engine': 'euchre-links',
-      'BasketballReference Python Package': 'bball-links',
-      'Employee Payroll App': 'api-links',
-      'Clean/Dirty Roads Machine Learning Model': 'machine-learning-links'
+      'Enterprise-Scale Architecture Kit': 'template-links',
+      'Real-Time Game Logic Engine': 'euchre-links',
+      'Automated Data Extraction Pipeline': 'bball-links',
+      'Full-Stack ERP Human Capital API': 'api-links',
+      'AI Road Condition Classifier': 'machine-learning-links'
     };
     return map[title] ?? 'project-links';
   }
