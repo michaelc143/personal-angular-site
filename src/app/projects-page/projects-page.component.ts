@@ -51,36 +51,36 @@ export class ProjectsPageComponent implements OnInit {
 
   projects: Project[] = [
     {
-      title: 'WebApp Template',
-      description: 'A full-stack web application template with a pre-configured Angular frontend and Spring Boot backend. Built to eliminate boilerplate when starting new projects.',
+      title: 'Enterprise-Scale Architecture Kit',
+      description: 'A production-ready full-stack boilerplate architected with Angular and Spring Boot. Features modular design patterns and clean architecture principles to accelerate the deployment of scalable enterprise applications.',
       image: 'https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/appTemplate.png',
-      tags: ['Angular', 'Spring Boot', 'TypeScript'],
+      tags: ['Angular', 'Spring Boot', 'Architecture'],
       links: [
         { label: 'View on GitHub', url: 'https://github.com/michaelc143/AppTemplate' }
       ]
     },
     {
-      title: 'Euchre Card Engine',
-      description: 'A rules engine for the Euchre card game, implementing full game logic including trump selection, trick-taking, and scoring. Built in Python with a clean API.',
+      title: 'Real-Time Game Logic Engine',
+      description: 'A high-integrity rules engine for the Euchre card game, featuring complex state management and real-time validation logic. Built with Python to demonstrate rigorous algorithmic design.',
       image: 'https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/euchre.png',
-      tags: ['Python', 'Game Logic'],
+      tags: ['Python', 'State Management'],
       links: [
         { label: 'View on GitHub', url: 'https://github.com/michaelc143/Card-engine' }
       ]
     },
     {
-      title: 'BasketballReference Python Package',
-      description: 'A Python package for scraping and querying NBA stats from Basketball-Reference.com. Published to PyPI with a simple API for pulling player and team data.',
+      title: 'Automated Data Extraction Pipeline',
+      description: 'A specialized Python package published to PyPI for high-throughput NBA data scraping. Optimized for reliability and ease of integration into larger data science workflows.',
       image: 'https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/bballPackage.png',
-      tags: ['Python', 'Web Scraping', 'PyPI'],
+      tags: ['Python', 'ETL', 'PyPI'],
       links: [
         { label: 'View on GitHub', url: 'https://github.com/michaelc143/BballRefWebScraper' },
         { label: 'View on PyPI', url: 'https://pypi.org/project/bballRefWebScraper/' }
       ]
     },
     {
-      title: 'Employee Payroll App',
-      description: 'A full-stack payroll management application with an Angular frontend and a Spring Boot REST API backend. Supports employee CRUD operations and payroll calculations.',
+      title: 'Full-Stack ERP Human Capital API',
+      description: 'A comprehensive payroll and employee management system with a robust Spring Boot REST API. Focuses on secure data handling and seamless frontend-to-backend orchestration.',
       image: 'https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/emp-api.png',
       tags: ['Angular', 'Spring Boot', 'REST API'],
       links: [
@@ -89,10 +89,10 @@ export class ProjectsPageComponent implements OnInit {
       ]
     },
     {
-      title: 'Clean/Dirty Roads Machine Learning Model',
-      description: 'A binary image classification model trained to distinguish clean from debris-covered roads. Built with Python and scikit-learn, using a custom image dataset.',
+      title: 'AI Road Condition Classifier',
+      description: 'A machine learning model trained for binary image classification of road surfaces. Demonstrates experience in data curation, model training, and integrating AI into functional pipelines.',
       image: 'https://raw.githubusercontent.com/michaelc143/personal-angular-site/main/src/app/projects-page/roadMachineLearning.png',
-      tags: ['Python', 'Machine Learning', 'scikit-learn'],
+      tags: ['Python', 'Scikit-Learn', 'ML'],
       links: [
         { label: 'View on GitHub', url: 'https://github.com/michaelc143/roads-machine-learning' }
       ]

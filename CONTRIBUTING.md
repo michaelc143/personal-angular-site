@@ -17,7 +17,7 @@ cd personal-angular-site
 
 2. Install dependencies:
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 
 ---
@@ -26,7 +26,7 @@ npm install
 
 Start the dev server:
 ```bash
-ng serve
+npm run start
 ```
 
 Open [http://localhost:4200](http://localhost:4200) in your browser. The app hot-reloads on file changes.
@@ -36,7 +36,7 @@ Open [http://localhost:4200](http://localhost:4200) in your browser. The app hot
 ## Build
 
 ```bash
-ng build
+npm run build
 ```
 
 Build artifacts are output to the `dist/` directory.
@@ -45,43 +45,33 @@ Build artifacts are output to the `dist/` directory.
 
 ## Testing
 
+### Unit Tests
 Run unit tests in watch mode:
 ```bash
-ng test
+npm run test
 ```
 
-Run once headlessly (for CI):
+### E2E Tests (Playwright)
+Run E2E tests against the local server:
 ```bash
-ng test --watch=false --browsers=ChromeHeadless
+npx playwright test
 ```
 
-Run with code coverage report:
+To view the last HTML report:
 ```bash
-ng test --watch=false --browsers=ChromeHeadless --code-coverage
-```
-
-Coverage output is written to `coverage/`.
-
----
-
-## Docker
-
-Build and run with Docker:
-```bash
-docker build -t personal-angular-site .
-docker run -p 4200:4200 personal-angular-site
+npx playwright show-report
 ```
 
 ---
 
 ## CI/CD
 
-Two GitHub Actions workflows run automatically on push:
+Automated workflows run on every push and pull request:
 
 | Workflow | Trigger | Description |
 |---|---|---|
-| `docker-image.yml` | Push to `main` | Builds the Docker image and runs tests |
-| `pages-build-deployment` | Push to `main` | Builds and deploys to GitHub Pages |
+| `deploy.yml` | Push/PR | Unified Pipeline: Unit Tests -> E2E Tests -> Build -> Deploy |
+| `docker-image.yml` | Push to `main` | Production build and unit test verification |
 
 ---
 

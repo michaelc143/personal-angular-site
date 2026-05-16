@@ -1,30 +1,33 @@
 mat-card {
   display: flex !important;
-  background-color: inherit;
-  border-radius: 8px;
-  margin: clamp(2rem, 8vw, 5rem) auto;
-  width: 80%;
-  max-width: 800px;
-  padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border-radius: 12px;
+  margin: clamp(1rem, 5vw, 4rem) auto;
+  width: 90%;
+  max-width: 900px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
   text-align: center;
+  border: 1px solid var(--border-color);
 
   .mat-mdc-card-header {
     justify-content: center !important;
   }
 
   mat-card-title h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
     font-weight: 300;
-    letter-spacing: 1px;
+    letter-spacing: -0.5px;
     margin-bottom: 0.5rem;
+    color: var(--primary-color);
     animation: fadeUp 0.6s ease-out both;
   }
 
   .subtitle {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     font-weight: 400;
-    color: #5a6a7a;
+    color: var(--text-secondary);
     margin-top: 0.25rem;
     animation: fadeUp 0.6s ease-out 0.15s both;
   }
@@ -32,10 +35,10 @@ mat-card {
 
 .bio-layout {
   display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 2.5rem;
   text-align: left;
-  margin-top: 1rem;
+  margin-top: 2rem;
   animation: fadeUp 0.6s ease-out 0.3s both;
 }
 
@@ -43,53 +46,57 @@ mat-card {
   flex: 1;
 
   p {
-    margin-bottom: 0.75rem;
-    line-height: 1.7;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    font-size: 1.05rem;
   }
 }
 
 .profile-pic {
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: clamp(120px, 15vw, 180px);
+  height: clamp(120px, 15vw, 180px);
   object-fit: cover;
   flex-shrink: 0;
-  border: 3px solid transparent;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  border: 4px solid var(--primary-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    transform: scale(1.04);
-    border-color: #61dafb;
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   }
 
   &--mobile {
     display: none;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.5rem;
   }
 }
 
 .tech-stack {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
   flex-wrap: wrap;
-  margin: 0.75rem 0;
+  margin: 1rem 0;
 
   .tech-label {
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #7f8c8d;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
   }
 
   img {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     transition: transform 0.2s ease;
+    filter: grayscale(20%);
 
     &:hover {
-      transform: scale(1.15);
+      transform: translateY(-4px) scale(1.1);
+      filter: grayscale(0%);
     }
   }
 }
@@ -97,49 +104,31 @@ mat-card {
 .cta-links {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-top: 1.25rem;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
   flex-wrap: wrap;
 
   a[mat-stroked-button] {
-    color: #3498db;
-    border-color: #3498db;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 600;
+    padding: 0 2rem;
+    height: 48px;
+    line-height: 46px;
 
     &:hover {
-      background-color: rgba(52, 152, 219, 0.08);
+      background-color: var(--job-date-bg);
     }
   }
 }
 
-// Dark mode
-.dark-mode-card {
-  background-color: #2d3748;
-  transition: background-color 0.3s ease;
-
-  mat-card-title h1 {
-    color: #61dafb;
-  }
-
-  .subtitle {
-    color: #b8c5d1;
-  }
-
-  .cta-links a[mat-stroked-button] {
-    color: #61dafb;
-    border-color: #61dafb;
-
-    &:hover {
-      background-color: rgba(97, 218, 251, 0.08);
-    }
-  }
-}
-
-// Responsive
+// Animations and Media Queries remain similar but with variable support
 @media (max-width: 768px) {
   .bio-layout {
     flex-direction: column;
     text-align: center;
+    gap: 1rem;
   }
 
   .profile-pic--mobile {
@@ -156,16 +145,9 @@ mat-card {
   }
 }
 
-// Animation
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .fade-in {

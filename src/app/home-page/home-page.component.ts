@@ -11,9 +11,9 @@ export class HomePageComponent implements OnInit {
   isDarkMode = false;
 
   homepageTitle = 'Michael Corbishley';
-  toolbarTip = 'Full Stack Software Engineer & Consultant';
-  para1 = "I'm a full stack software engineer based in Wisconsin, specializing in modern web applications and cloud infrastructure. I graduated from UW–Madison with a degree in Computer Science and focus on building things that are fast, accessible, and built to last.";
-  para2 = "I've worked across enterprise software, AI integration, and distributed systems. I care about clean architecture, readable code, and shipping things that work. If you have a problem worth solving, I'd love to hear about it.";
+  toolbarTip = 'Software Development Consultant | Enterprise SaaS Architect';
+  para1 = "I am a Software Development Consultant at Esker, specializing in bridging the gap between complex full-stack engineering and enterprise business strategy. I architect scalable solutions that optimize global O2C pipelines, integrating AI-driven automation into ERP ecosystems like SAP and Oracle.";
+  para2 = "With a systems-focused foundation from UW–Madison, I build high-integrity applications that transform manual business processes into automated, data-driven successes. I thrive at the intersection of technical execution and high-level consultative delivery.";
 
   constructor(private darkModeService: DarkModeService) {}
 
