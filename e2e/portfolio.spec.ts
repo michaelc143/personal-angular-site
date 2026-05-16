@@ -69,6 +69,11 @@ test.describe('Portfolio E2E Tests', () => {
     // Verify CTA links stack or center
     const ctaLinks = page.locator('.cta-links');
     await expect(ctaLinks).toHaveCSS('justify-content', 'center');
+
+    const homeCardScrollsInternally = await page.locator('mat-card').evaluate((card) => (
+      card.scrollHeight > card.clientHeight
+    ));
+    expect(homeCardScrollsInternally).toBe(false);
   });
 
 });
