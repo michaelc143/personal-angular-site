@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatButtonModule } from '@angular/material/button';
 import { DarkModeService } from 'angular-dark-mode';
 
 interface ProjectLink {
@@ -16,6 +20,8 @@ interface Project {
 
 @Component({
   selector: 'app-projects-page',
+  standalone: true,
+  imports: [CommonModule, MatCardModule, MatChipsModule, MatButtonModule],
   templateUrl: './projects-page.component.html',
   styleUrls: ['./projects-page.component.scss']
 })

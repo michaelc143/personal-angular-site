@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatChipsModule } from '@angular/material/chips';
 import { DarkModeService } from 'angular-dark-mode';
 
 interface Job {
@@ -15,6 +19,8 @@ interface SkillGroup {
 
 @Component({
   selector: 'app-experience-page',
+  standalone: true,
+  imports: [CommonModule, MatCardModule, MatExpansionModule, MatChipsModule],
   templateUrl: './experience-page.component.html',
   styleUrls: ['./experience-page.component.scss']
 })

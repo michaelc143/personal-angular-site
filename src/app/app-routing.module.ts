@@ -1,15 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ExperiencePageComponent } from './experience-page/experience-page.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { ProjectsPageComponent } from './projects-page/projects-page.component';
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent },
-  { path: 'experience', component: ExperiencePageComponent },
-  { path: 'projects', component: ProjectsPageComponent },
-  { path: '**', component: NotFoundComponent},
+  { 
+    path: '', 
+    loadComponent: () => import('./home-page/home-page.component').then(m => m.HomePageComponent) 
+  },
+  { 
+    path: 'experience', 
+    loadComponent: () => import('./experience-page/experience-page.component').then(m => m.ExperiencePageComponent) 
+  },
+  { 
+    path: 'projects', 
+    loadComponent: () => import('./projects-page/projects-page.component').then(m => m.ProjectsPageComponent) 
+  },
+  { 
+    path: '**', 
+    loadComponent: () => import('./not-found/not-found.component').then(m => m.NotFoundComponent) 
+  },
 ];
 
 @NgModule({
