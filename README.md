@@ -2,7 +2,6 @@
 ### Enterprise SaaS Architecture • AI-Driven Automation • Consultative Delivery
 
 [![CI/CD Pipeline](https://github.com/michaelc143/personal-angular-site/actions/workflows/deploy.yml/badge.svg)](https://github.com/michaelc143/personal-angular-site/actions/workflows/deploy.yml)
-[![Build and Test](https://github.com/michaelc143/personal-angular-site/actions/workflows/docker-image.yml/badge.svg)](https://github.com/michaelc143/personal-angular-site/actions/workflows/docker-image.yml)
 [![Angular](https://img.shields.io/badge/Angular-16-DD0031?style=flat&logo=angular&logoColor=white)](https://angular.io/)
 [![Playwright](https://img.shields.io/badge/E2E-Playwright-2EAD33?style=flat&logo=playwright&logoColor=white)](https://playwright.dev/)
 

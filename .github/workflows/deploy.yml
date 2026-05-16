@@ -10,12 +10,12 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   test-and-verify:
     runs-on: ubuntu-latest
-    outputs:
-      tests_passed: ${{ steps.unit-tests.outcome == 'success' && steps.e2e-tests.outcome == 'success' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,20 +30,21 @@ jobs:
         run: npm ci --legacy-peer-deps
 
       - name: Run Unit Tests
-        id: unit-tests
         run: npm run test -- --watch=false --browsers=ChromeHeadless
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps chromium
 
       - name: Run E2E Tests
-        id: e2e-tests
         run: npx playwright test
 
   deploy-pages:
     needs: test-and-verify
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -60,12 +61,14 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/personal-angular-site
-          cname: michaelcorbishley.com
+          path: ./dist/personal-angular-site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
   deploy-docker:
     needs: test-and-verify
